@@ -4,7 +4,7 @@ import Title from "./Title";
 const TitleList =  ({name, handleClick}) =>{
 return (
  <>
-{name.map(name => <Title name={name} handleClick={handleClick}  handleEdit={handleEdit} key={name}/>)}
+{name.map(name => <Title name={name} handleClick={handleClick} key={name}/>)}
 </>
 )
 }
