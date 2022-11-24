@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import TitleList from'./TitleList';
+
 
 function App() {
+  
+  let [name,setName] =useState(['rumst', 'jeppe', 'jgom','blom']);
+
+  function handleDelete(nameInput){
+    const newNames= name.filter(name=>name!==nameInput);
+    setName(newNames);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="root">
+     <TitleList name={name} handleClick={handleDelete}/>
     </div>
   );
 }
