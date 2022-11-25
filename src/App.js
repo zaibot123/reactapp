@@ -7,25 +7,18 @@ import dataJson from './data.json'
 
 function App() {
 
-  let [titles,setTitleList] =useState(dataJson['items'].map(title=>title['titleName']));
-  let data= dataJson['items']
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const response = await fetch(`http://localhost:5001/api/movies?searchtype=simple&title=warrior`);
-  //     const newData = await response.json();
-  //     console.log(newData)
-  //   };
-  // fetchData();
-  //});
+  let [items,setTitleList] =useState(dataJson['items']);
+
+
+
   function handleDelete(titleInput){  
-    console.log(titleInput)
-    const titlesList= titles.filter(title=>title!==titleInput);
+    const titlesList= items.filter(title=>title.titleName!==titleInput);
     setTitleList(titlesList);
   }
 
   return (
     <div className="root">
-     <TitleList name={titles} handleClick={handleDelete} allinfo={data}/>
+     <TitleList handleClick={handleDelete} all={items}/>
     </div>
   );
 }
