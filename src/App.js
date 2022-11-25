@@ -2,13 +2,13 @@ import { useState,useEffect } from 'react';
 import './App.css';
 import TitleList from'./TitleList';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import data from './data.json'
+import dataJson from './data.json'
 
 
 function App() {
 
-  let [titles,setTitleList] =useState(data['items'].map(title=>title['titleName']));
-
+  let [titles,setTitleList] =useState(dataJson['items'].map(title=>title['titleName']));
+  let data= dataJson['items']
   // useEffect(() => {
   //   const fetchData = async () => {
   //     const response = await fetch(`http://localhost:5001/api/movies?searchtype=simple&title=warrior`);
@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="root">
-     <TitleList name={titles} handleClick={handleDelete}/>
+     <TitleList name={titles} handleClick={handleDelete} allinfo={data}/>
     </div>
   );
 }
