@@ -1,15 +1,16 @@
 import React from "react";
-
+import Button from 'react-bootstrap/Button';
 
 const Title = ({name,handleClick}) =>{
 
     return (
-        <div className="title" key ={name}>
+        <div className="container p-5 my-5 bg-dark text-white" key ={name}>
                <h1>{name}</h1>
+
                <div className="buttondelete">
-                      <button onClick={ () =>handleClick(name)}>
+                      <Button variant ="primary" onClick={ () =>handleClick(name)} className>
                         delet this
-                     </button>
+                     </Button>
               </div>
         </div>
     )
