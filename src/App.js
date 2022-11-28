@@ -13,7 +13,10 @@ function App() {
     setTitleList(titlesList);
   }
 
+  
+ 
   return (
+   
     <div className="root">
      <TitleList handleClick={handleDelete} all={items}/>
     </div>

@@ -2,12 +2,13 @@
   text-align: center;
 }
 .title{
-  width: 300px;
-  height: 100px;
+  width: flex;
+  height: flex;
   margin: 15px;
-  outline: solid 1px rgb(157, 31, 31);
+  outline: solid 5px rgb(157, 31, 31);
   display: flex;
   justify-content: center;
+  
 }
 
 .App-logo {
@@ -44,3 +45,4 @@
     transform: rotate(360deg);
   }
 }
+
