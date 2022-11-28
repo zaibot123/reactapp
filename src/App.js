@@ -6,10 +6,7 @@ import dataJson from './data.json'
 
 
 function App() {
-
   let [items,setTitleList] =useState(dataJson['items']);
-
-
 
   function handleDelete(titleInput){  
     const titlesList= items.filter(title=>title.titleName!==titleInput);
