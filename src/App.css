@@ -1,14 +1,40 @@
 .App {
   text-align: center;
 }
-.title{
+.card{
+margin-top: 10px;
+margin-right: 20px;
+margin-bottom: 50px;
+margin-left: 30px;
+
+  width: 400px;
+  height:200px;
+}
+
+.list-title{
+  font-size: 40px;
+  background: linear-gradient(90deg, rgb(121, 124, 128) 0%, rgb(195, 195, 195) 0%, rgb(167, 190, 195) 100%);
   width: flex;
   height: flex;
-  margin: 15px;
-  outline: solid 5px rgb(157, 31, 31);
+  font-weight :bolder;
+  margin: 1px;
   display: flex;
   justify-content: center;
-  
+}
+.title{
+  font-family: "Gill Sans Extrabold", sans-serif;
+  font-size: 40px;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,121,180,1) 0%, rgba(0,212,255,1) 100%);
+  width: flex;
+  height: flex;
+  font-weight :bolder;
+  margin: 1px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-img-top{
+
 }
 
 .App-logo {
@@ -20,6 +46,36 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.button-62 {
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(10, 10, 25) 0%, rgb(11, 66, 78) 100%);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.button-62:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-62:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
 }
 
 .App-header {

@@ -1,140 +1,70 @@
 {
-    "first": "http://localhost:5001/api/movies?searchtype=simple&search=warrior&page=0&pageSize=10",
-    "prev": null,
-    "next": "http://localhost:5001/api/movies?searchtype=simple&search=warrior&page=1&pageSize=10",
-    "current": "http://localhost:5001/api/movies?searchtype=simple&search=warrior&page=0&pageSize=10",
+    "first": "http://localhost:5001/api/movies?searchtype=simple&title=warrior&page=0&pageSize=10",
+    "prev": "http://localhost:5001/api/movies?searchtype=simple&title=warrior&page=1&pageSize=10",
+    "next": "http://localhost:5001/api/movies?searchtype=simple&title=warrior&page=3&pageSize=10",
+    "current": "http://localhost:5001/api/movies?searchtype=simple&title=warrior&page=2&pageSize=10",
     "total": 235,
     "pages": 24,
     "items": [
         {
-            "titleId": "tt3359730",
-            "titleName": "100 Years",
-            "titleType": "movie",
-            "poster": "https://m.media-amazon.com/images/M/MV5BNGY2NjhmMDItOTMwMS00MWJiLTk2OTgtNjVkYWQ4MTQ5M2VkXkEyXkFqcGdeQXVyNDgxMTMwMQ@@._V1_SX300.jpg",
-            "titlePlot": "\"100 Years\" is the David vs. Goliath story of Elouise Cobell, a petite, Native American Warrior who filed the largest class action lawsuit ever filed against the United States Government and WON a $3.4 billion settlement for 300,000 Native Americans whose mineral-rich lands were mismanaged by the Department of the Interior.",
-            "startYear": "2016",
-            "endYear": "    ",
-            "runtime": 76,
-            "isAdult": false,
-            "nrRatings": 54,
-            "avgRating": 7.5
+            "url": "http://localhost:5001/api/movies/tt5246020",
+            "titleName": "Belén",
+            "poster": "https://m.media-amazon.com/images/M/MV5BODBhZGQ0OGYtNDc0ZC00NGM5LWJhNTgtZWY2ODU0NWRlNjdiXkEyXkFqcGdeQXVyNjQwOTM5ODc@._V1_SX300.jpg",
+            "plot": "Hands of earth, crystal eyes, ancestral bridge through time, gender and race. Immortal humble wise noble warrior. Queen of bamboo's sounds and silence. Felt around and not just as an echo. Resisting beating African Diaspora. Inspiration to continue each battle. Resonating spirit: Belen."
         },
         {
-            "titleId": "tt9517188",
-            "titleName": "3 Bahadur: Rise of the Warriors",
-            "titleType": "movie",
-            "poster": "https://m.media-amazon.com/images/M/MV5BZWEzNWU2ODAtYWE1OS00MWQ2LTk1YjUtYTBjMWFmM2MyYzJlXkEyXkFqcGdeQXVyMzc0NzU5MTc@._V1_SX300.jpg",
-            "titlePlot": "A safe and peaceful town with all the villains put behind bars - thanks to our heroes. The kids are going about their lives like other children, at times finding it difficult to control their powers. It is only during a school trip when they run into the mysterious circus performer, Erma (Mehwish Hayat), that things start to heat up. Erma is a superhero from a parallel world, running and hiding from Babushka (Nimra Bucha), who is searching for her to take away her superpowers. The three vow to protect Erma, even turning against Deenu Chacha (Behroze Sabzwari), their mentor who gave them their powers in the first place. More twists follow as the children work selflessly for the greater good.",
-            "startYear": "2018",
-            "endYear": "    ",
-            "runtime": 94,
-            "isAdult": false,
-            "nrRatings": 60,
-            "avgRating": 8.2
+            "url": "http://localhost:5001/api/movies/tt7329290",
+            "titleName": "Bhamashah",
+            "poster": "https://m.media-amazon.com/images/M/MV5BODQwOGI2YWEtNDI0Ny00NTVkLTllYjgtZTMxOGI4MmNhYzA4XkEyXkFqcGdeQXVyODE0OTE2Njk@._V1_SX300.jpg",
+            "plot": "A retelling of the story of Bhamashah, a truly remarkable character in Indian history- a philanthropist, warrior, advisor to Maharana Pratap and most importantly, a Jain Shravak. On the forefront of massive wars against the Moguls, Bhamashah looted their treasure and donated all his wealth to Mewar."
         },
         {
-            "titleId": "tt13412642",
-            "titleName": "A Crown of Candy: For Candia! Part 2",
-            "titleType": "tvEpisode",
-            "poster": "https://m.media-amazon.com/images/M/MV5BMzJhZDdjYzItNGQ1My00NzEyLTkzZWYtNWY4YjcxM2EzZjZkXkEyXkFqcGdeQXVyNTMyMDQxMQ@@._V1_SX300.jpg",
-            "titlePlot": "The siege of Castle Candy comes to an end, and two warriors must make a terrible choice.",
-            "startYear": "2020",
-            "endYear": "    ",
-            "runtime": 147,
-            "isAdult": false,
-            "nrRatings": 1,
-            "avgRating": 5
+            "url": "http://localhost:5001/api/movies/tt3576728",
+            "titleName": "Bilal: A New Breed of Hero",
+            "poster": "https://m.media-amazon.com/images/M/MV5BNmEyY2IxYTktMzIxMS00MzNmLTlmMjEtZGE1YzZkMDVjYzdiXkEyXkFqcGdeQXVyMTYxMzQzNTU@._V1_SX300.jpg",
+            "plot": "A thousand years ago, one boy with a dream of becoming a great warrior is abducted with his sister and taken to a land far away from home. Thrown into a world where greed and injustice rule all, Bilal finds the courage to raise his voice and make a change. Inspired by true events, this is a story of a real hero who earned his remembrance in time and history."
         },
         {
-            "titleId": "tt8667750",
-            "titleName": "A New Leash on Life: The K9s for Warriors Story",
-            "titleType": "movie",
-            "poster": "https://m.media-amazon.com/images/M/MV5BYzkxMTgxYzEtNWRlYi00YTY3LWFiNTUtODgxOWY3ODM2MzE5XkEyXkFqcGdeQXVyNDE0OTA0ODM@._V1_SX300.jpg",
-            "titlePlot": "Shari Duval was desperate for a solution to help her son Brett when he returned from serving in Iraq, suffering from PTSD. She stumbled on a story about a service dog helping a veteran and ...",
-            "startYear": "2018",
-            "endYear": "    ",
-            "runtime": 58,
-            "isAdult": false,
-            "nrRatings": 9,
-            "avgRating": 7.4
-        },
-        {
-            "titleId": "tt15169682",
-            "titleName": "A Starstruck Odyssey: Battle of the Brands",
-            "titleType": "tvEpisode",
-            "poster": "https://m.media-amazon.com/images/M/MV5BZTZkMzNiMjUtOGYxYi00NzliLTlkZDUtOWJhMTQ5NTdhYTUzXkEyXkFqcGdeQXVyNzQyMjM1MjY@._V1_SX300.jpg",
-            "titlePlot": "The Gunner Channel must compete in a battle royale against the galaxy's deadliest brand warriors.",
-            "startYear": "2022",
-            "endYear": "    ",
-            "runtime": 101,
-            "isAdult": false,
-            "nrRatings": 1,
-            "avgRating": 5
-        },
-        {
-            "titleId": "tt10529418",
-            "titleName": "A True Warrior",
-            "titleType": "tvEpisode",
-            "poster": "https://m.media-amazon.com/images/M/MV5BZmQxM2JiZDUtZmYwNC00ZTAyLWFmY2EtODY4OGRiODY2NDY1XkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_SX300.jpg",
-            "titlePlot": "As the ships are surrounded by Askeladd's pirates, Thors decides to take action on his own hands in order to protect the crew and his son.",
-            "startYear": "2019",
-            "endYear": "    ",
-            "runtime": 24,
-            "isAdult": false,
-            "nrRatings": 3323,
-            "avgRating": 9.6
-        },
-        {
-            "titleId": "tt1359053",
-            "titleName": "A Warrior's Religion",
-            "titleType": "movie",
+            "url": "http://localhost:5001/api/movies/tt5123416",
+            "titleName": "Born Warriors Redux: Bound Fists",
             "poster": "N/A",
-            "titlePlot": "0",
-            "startYear": "2009",
-            "endYear": "    ",
-            "runtime": 100,
-            "isAdult": false,
-            "nrRatings": 19,
-            "avgRating": 7.3
+            "plot": "Born Warriors Redux: Bound Fists focuses on the role of cultural tradition in local communities and how the indigenous Burmese sport of Lethwei (bare-knuckle fighting) is woven into the fabric of rural life and practiced in modern arenas throughout Myanmar."
         },
         {
-            "titleId": "tt2206002",
-            "titleName": "AFK: Heroes of Prophecy",
-            "titleType": "movie",
-            "poster": "https://m.media-amazon.com/images/M/MV5BMTU1NDkyNDQ1OV5BMl5BanBnXkFtZTcwODg5MTYwOA@@._V1_SX300.jpg",
-            "titlePlot": "For Kyle Masters, life was grand. Rolling dice in his garage with his friends, a beautiful woman on his arms, what could go wrong... Oh where to begin? What was suppose to turn into an epic weekend of LARP fun, killing monster, slaying evil, and just general good times, turns into a weekend of watching his girl suck face with his arch nemesis. Gabe tries his best to help his best friend keep high spirits. Never letting Kyle forget that they are not at the LARP to play kissy face but to thwart the forces of evil! Then a weekend of Epic LARP adventure turns into a wild Misadventure after an Ancient Evil pulls all the LARPers into an alternate realm. In this realm where imagination becomes reality, the group finds out that they now wield the powers they always pretended they had. Here they can become the Heroes they always felt they were. Like any good adventure the gang is handed a quest by the Sleeping Goddess. Slay the evil. Save her. And then find a way home. Now the weekend warriors will set out to become the Heroes of Prophecy.",
-            "startYear": "2011",
-            "endYear": "    ",
-            "runtime": 96,
-            "isAdult": false,
-            "nrRatings": 20,
-            "avgRating": 7.1
+            "url": "http://localhost:5001/api/movies/tt14138864",
+            "titleName": "Brendar the Barbarian",
+            "poster": "https://m.media-amazon.com/images/M/MV5BNWQ3ZmVhMDQtODM3Ny00YzdhLThkNGItZDkzYjVlZTgyM2E3XkEyXkFqcGdeQXVyODk1MjAxNzQ@._V1_SX300.jpg",
+            "plot": "Brendar, a disowned warrior princess, begins a journey to defeat a demon linked to her complicated backstory, meeting an optimistic yet insecure troll prince named Evan."
         },
         {
-            "titleId": "tt5286826",
-            "titleName": "Ahen Gladiators",
-            "titleType": "short",
-            "poster": "https://m.media-amazon.com/images/M/MV5BNDA5MDYwNTg2OF5BMl5BanBnXkFtZTgwMjkxODk1NzE@._V1_SX300.jpg",
-            "titlePlot": "In AD 80, after 12 years of strenuous construction work according to the will of Emperor Domitian, Rome witnesses the completion of the greatest death arena - the Coliseum! The invincible master of Capua has once again defeated the gladiators of the Roman Imperial School of Rome. The Coliseum welcomes another group of fierce warriors - Ahen's gladiators! Rich Cassius holds a reception in his villa before his summer trip to the Adriatic Sea. The main attractions during the feast are the fights of the gladiators who will feature in the autumn games. One of the guests, Senator Marcius, challenges Cassius by announcing that he is going to train champions who will be able to defeat any of his gladiators. They make a bet, putting down a fortune.",
-            "startYear": "2015",
-            "endYear": "    ",
-            "runtime": 20,
-            "isAdult": false,
-            "nrRatings": 235,
-            "avgRating": 9.2
+            "url": "http://localhost:5001/api/movies/tt10870106",
+            "titleName": "Britannia VR: Out of your Mind",
+            "poster": "https://m.media-amazon.com/images/M/MV5BYTcxYjEyMmYtZDBkYS00YzAwLTkwYWQtNmI3NGQ2MWUyNjRkXkEyXkFqcGdeQXVyMTA4Mjc0OTkz._V1_SX300.jpg",
+            "plot": "An anarchic drama that follows the Roman army as they return to crush the Celtic heart of Britannia, a mysterious land led by warrior women and powerful Druids who claim to channel the powerful forces of the underworld."
         },
         {
-            "titleId": "tt6772966",
-            "titleName": "American Ninja Warrior: Celebrity Edition",
-            "titleType": "tvSpecial",
-            "poster": "https://m.media-amazon.com/images/M/MV5BZjU5NTMyNDEtYmNkZi00YmQ3LWJmN2QtNzhjYjlkN2M1YTA1XkEyXkFqcGdeQXVyNzY5MzY2MDA@._V1_SX300.jpg",
-            "titlePlot": "A special edition of American Ninja Warrior done for charity, celebrities will participate in the events while being coached by popular American Ninja Warrior Veterans.",
-            "startYear": "2017",
-            "endYear": "    ",
-            "runtime": 0,
-            "isAdult": false,
-            "nrRatings": 40,
-            "avgRating": 7.9
+            "url": "http://localhost:5001/api/movies/tt6422070",
+            "titleName": "Broly the Legendary Super Saiyan Abridged",
+            "poster": "https://m.media-amazon.com/images/M/MV5BM2Q1OGM4N2ItZTU3Ny00Y2RiLTlhOWMtYzg0NmI0NGYyZmQwXkEyXkFqcGdeQXVyNjU1OTg4OTM@._V1_SX300.jpg",
+            "plot": "In this comedic parody of the eighth \"Dragon Ball Z\" film, Prince Vegeta's reckless pride leads the Z Warriors into a battle against an incredibly deadly foe, who holds an incredibly fierce grudge against Goku... for an incredibly stupid reason."
+        },
+        {
+            "url": "http://localhost:5001/api/movies/tt4874006",
+            "titleName": "Carry on Maratha",
+            "poster": "https://m.media-amazon.com/images/M/MV5BNDAyMjgzN2MtOTY1MS00ZWFlLThkODctNzUxY2Y0ZjJhYmRmXkEyXkFqcGdeQXVyMzc0ODYyNzk@._V1_SX300.jpg",
+            "plot": "Kolhapur's young Maratha, Martand comes across Kusum, a South Indian girl looking for a lift in the middle of the road. A chance encounter turns into a love story that brings both families face-to-face. Will the Maratha warrior be successful in love?"
+        },
+        {
+            "url": "http://localhost:5001/api/movies/tt11428366",
+            "titleName": "China's Dragon Emperor",
+            "poster": "https://m.media-amazon.com/images/M/MV5BZTU3OTg2NmYtNTRkNS00MzUwLTgxZWItZTM1YjMwMThiYjkzXkEyXkFqcGdeQXVyMTAxMDk2NDgx._V1_SX300.jpg",
+            "plot": "The story of Qin Shi Huang is as epic in life as it is in death. Crowned as a boy king over 2,000 years ago, he grew to unify China for the first time, establishing a new form of government, uniform laws, and a single writing system that is still in use today. He also ordered the construction of a royal tomb that is larger than the Great Pyramid of Giza and is guarded by a massive army of terracotta warriors. Explore the transformative life and magnificent afterlife of China's first emperor."
+        },
+        {
+            "url": "http://localhost:5001/api/movies/tt7515592",
+            "titleName": "Chiseled",
+            "poster": "https://m.media-amazon.com/images/M/MV5BNzhmODlkMjctNDRkYy00ODFlLThlZmYtODY2YTg4ZTBhNGE0XkEyXkFqcGdeQXVyODA3NTk5Nzg@._V1_SX300.jpg",
+            "plot": "\"Chiseled\" is an heritage documentary about magnificent temples, splendid forts and beautiful lakes ruled over by a warrior civilisation called \"Kakatiya Dynasty\"."
         }
     ]
 }
