@@ -1,22 +1,87 @@
 import { useState,useEffect } from 'react';
 import './App.css';
-import TitleList from'./TitleList';
+import TitleList from'./Components/TitleList';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import dataJson from './data.json'
-
+import { 
+  Routes, Route, Link, NavLink, useParams, Outlet
+} from "react-router-dom";
+import NavBar from './Components/navbar';
+import PopularList from './Components/PopularList';
+import MovieBigPoster  from './Components/MovieBigPoster';
 
 function App() {
-  let [items,setTitleList] =useState(dataJson['items']);
 
-  function handleDelete(titleInput){  
-    const titlesList= items.filter(title=>title.titleName!==titleInput);
-    setTitleList(titlesList);
-  }
-  return (
+function Main () {
+let [popularMovies, setPopularMovies]=useState(null);
+useEffect(() => {
+  const fetchData = async () => {
+    const response = await fetch('http://localhost:5001/api/movies/popular');
+    const newData = await response.json();
+    setPopularMovies(newData);  
+  };
+  fetchData();
+},[]);
 
-    <div className="root">
-     <TitleList handleClick={handleDelete} all={items}/>
-    </div>
-  );
+if (popularMovies) {
+  console.log(typeof(popularMovies))
+  return <PopularList PopularList={popularMovies} handleClick={BigMovie}/>
+} else {
+  return null;
 }
+}
+
+
+
+function BigMovie () {
+  const { uid} = useParams();
+  return(
+  <div>
+<MovieBigPoster MovieID={String(uid)} />
+  </div>
+  )
+  }
+
+
+
+  function Search () {
+     let [query,setQuery]=useState(null)
+     let [status, setStatus]=useState('Loading')
+    const {search} = useParams()
+  useEffect(() => {
+    const fetchData = async () => { 
+      const response = await fetch("http://localhost:5001/api/movies?searchtype=simple&username=henrik&title="+search+"&page=1&pageSize=10");
+      const newData = await response.json();  
+      setQuery(newData['items'])
+      setStatus('Done')
+    };
+    fetchData();
+  },[query]);
+
+  if (status==="Done") {
+    return <TitleList query={query}/>
+  } else {
+    return <h1>Loading</h1>;
+  }
+}
+
+
+
+  
+  return (
+    <div className="root">
+      <NavBar/>
+      { /* ... and here is what happens when you click them */ }
+      <Routes>
+      <Route path="/"     element={<Main />} />
+      <Route path="/search/:search"   element={<Search/>} />
+      <Route path="api/movies/:uid"   element={<BigMovie/>} />
+      <Route path="/movie"   element={<BigMovie/>} />
+      </Routes>
+    </div>
+
+  );
+  }
+
+
 export default App;
