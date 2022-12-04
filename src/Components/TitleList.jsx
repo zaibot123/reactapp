@@ -2,8 +2,6 @@ import React from "react";
 import Title from "./Title";
 
 const TitleList =  ({query}) =>{
-    console.log(query)
-    console.log("ejCOme")
 return (
  <>
 <div className="list-title">
