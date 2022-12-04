@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 
 
 const Title = ({all}) =>{
+  let URLwithRightPORT=all.url.replace (5001,3000)
 
     return (
     
@@ -14,7 +15,7 @@ const Title = ({all}) =>{
   <img className="card-img-top" src={all.poster}/>
     <p className="card-text"> {all.plot.slice(0,100)}</p>
 
-<button class="button-62" onClick={() => window.location.href=all.url}>
+<button class="button-62" onClick={() => window.location.href=URLwithRightPORT}>
 Se Mere
  </button>
   </div>

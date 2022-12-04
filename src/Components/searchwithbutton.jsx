@@ -11,7 +11,7 @@ function SearchButton(search){
         placeholder="Search..."
         name="s" 
         />
-    <NavLink className="btn" to="/search/gome">Søg</NavLink>
+    <NavLink className="btn" to="/search/test">Søg</NavLink>
    </div>
     )
 }
