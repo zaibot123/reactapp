@@ -1,11 +1,11 @@
 import { useState } from "react";
-import Movie from "C:\\Users\\Tobia\\Reactsjovt\\reactapp\\src\\Components\\Movie.jsx";
+import Movie from "./Movie.jsx";
 
 const PopularList =  ({PopularList,BigMovie}) =>{
 
     return (
      <>
-    <div className="popular-title">
+    <div className="list-title">
         <h1>Top 100 Movies!</h1>
     </div>
 
