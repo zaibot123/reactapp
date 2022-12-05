@@ -16,6 +16,7 @@ function MovieBigPoster({MovieID}){
         const fetchData = async () => {
           const response = await fetch(url);
           const newData = await response.json();
+          console.log(newData)
           setTitle(newData[0]['titleName'])
           setPoster(newData[0]['poster'])
           setPlot(newData[0]['titlePlot'])
@@ -25,7 +26,9 @@ function MovieBigPoster({MovieID}){
 
 return( 
 <div>
+<div className="list-title">
     <h1>{Title}</h1>
+</div>
 <img src={Poster} alt="alternatetext"/>
 <p>{Plot}</p>
 </div>

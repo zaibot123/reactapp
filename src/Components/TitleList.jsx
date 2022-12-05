@@ -1,13 +1,13 @@
 import React from "react";
 import Title from "./Title";
 
-const TitleList =  ({query}) =>{
+const TitleList =  ({listOfResults}) =>{
 return (
  <>
 <div className="list-title">
     <h1>Movies</h1>
 </div>
- {query.map(query => <Title all={query} key={query.url}/>)}
+ {listOfResults.map(x => <Title all={x} key={x.url}/>)}
 </>
 )
 }

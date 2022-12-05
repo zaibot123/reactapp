@@ -4,9 +4,8 @@ import Button from 'react-bootstrap/Button';
 
 const Title = ({all}) =>{
   let URLwithRightPORT=all.url.replace (5001,3000)
-
     return (
-    
+
 <div class="card">
     <div class="title">
     {all.titleName} 

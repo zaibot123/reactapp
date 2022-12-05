@@ -6,7 +6,7 @@ import dataJson from './data.json'
 import { 
   Routes, Route, Link, NavLink, useParams, Outlet
 } from "react-router-dom";
-import NavBar from './Components/navbar';
+import NavBar from './Components/navbar'; 
 import PopularList from './Components/PopularList';
 import MovieBigPoster  from './Components/MovieBigPoster';
 
@@ -45,21 +45,23 @@ function BigMovie () {
 
 
   function Search () {
-     let [query,setQuery]=useState(null)
+     let [result,setResult]=useState(null)
      let [status, setStatus]=useState('Loading')
+
     const {search} = useParams()
+    
   useEffect(() => {
     const fetchData = async () => { 
       const response = await fetch("http://localhost:5001/api/movies?searchtype=simple&username=henrik&title="+search+"&page=1&pageSize=10");
       const newData = await response.json();  
-      setQuery(newData['items'])
+      setResult(newData['items'])
       setStatus('Done')
     };
     fetchData();
-  },[query]);
+  },[result]);
 
   if (status==="Done") {
-    return <TitleList query={query}/>
+    return <TitleList listOfResults={result}/>
   } else {
     return <h1>Loading</h1>;
   }
@@ -74,6 +76,7 @@ function BigMovie () {
       { /* ... and here is what happens when you click them */ }
       <Routes>
       <Route path="/"     element={<Main />} />
+      
       <Route path="/search/:search"   element={<Search/>} />
       <Route path="api/movies/:uid"   element={<BigMovie/>} />
       <Route path="/movie"   element={<BigMovie/>} />

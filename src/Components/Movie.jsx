@@ -8,6 +8,7 @@ const PopularMovie = ({PopularMovie,handleClick}) =>{
 <div>
 
 <NavLink className="btn" to ="movies/tt2301451"></NavLink>
+
   <a href={URLwithRightPORT}>{PopularMovie.titleName}</a>
   -  Rating: {PopularMovie.rating}
 </div>
