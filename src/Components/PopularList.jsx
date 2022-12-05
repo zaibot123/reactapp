@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Movie from "C:\\Users\\Tobia\\Reactsjovt\\reactapp\\src\\Components\\Movie.jsx";
+import Movie from "./Movie.jsx";
 
 const PopularList =  ({PopularList,BigMovie}) =>{
 

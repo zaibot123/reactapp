@@ -10,7 +10,11 @@ import NavBar from './Components/navbar';
 import PopularList from './Components/PopularList';
 import MovieBigPoster  from './Components/MovieBigPoster';
 
+
+
+
 function App() {
+
 
 function Main () {
 let [popularMovies, setPopularMovies]=useState(null);
@@ -32,7 +36,6 @@ if (popularMovies) {
 }
 
 
-
 function BigMovie () {
   const { uid} = useParams();
   return(
@@ -43,14 +46,13 @@ function BigMovie () {
   }
 
 
-
   function Search () {
      let [query,setQuery]=useState(null)
      let [status, setStatus]=useState('Loading')
     const {search} = useParams()
   useEffect(() => {
     const fetchData = async () => { 
-      const response = await fetch("http://localhost:5001/api/movies?searchtype=simple&username=henrik&title="+search+"&page=1&pageSize=10");
+      const response = await fetch("http://localhost:5001/api/movies?searchtype=simple&username=Maria&title="+search+"&page=1&pageSize=10");
       const newData = await response.json();  
       setQuery(newData['items'])
       setStatus('Done')
@@ -63,11 +65,7 @@ function BigMovie () {
   } else {
     return <h1>Loading</h1>;
   }
-}
-
-
-
-  
+}  
   return (
     <div className="root">
       <NavBar/>
