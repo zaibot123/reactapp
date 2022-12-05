@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import Card from 'react-bootstrap/Card';
+import CardGroup from 'react-bootstrap/CardGroup';
 
 
 
@@ -25,13 +27,39 @@ function MovieBigPoster({MovieID}){
       },[]);
 
 return( 
+
+
+
+
+
+
 <div>
+
 <div className="list-title">
     <h1>{Title}</h1>
 </div>
-<img src={Poster} alt="alternatetext"/>
-<p>{Plot}</p>
+
+
+
+<CardGroup>
+<Card>
+  <Card.Img variant="top" src={Poster} alt="alternatetext" />
+  <Card.Body>
+    <Card.Title> {Title}</Card.Title>
+    <Card.Text>
+    </Card.Text>
+  </Card.Body>
+  <Card.Footer>
+    <small className="text-muted">{Plot}</small>
+  </Card.Footer>
+</Card>
+</CardGroup>
 </div>
+
+
+
+
+
 )
 }
 export default MovieBigPoster;

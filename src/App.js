@@ -9,6 +9,8 @@ import {
 import NavBar from './Components/navbar'; 
 import PopularList from './Components/PopularList';
 import MovieBigPoster  from './Components/MovieBigPoster';
+import { ListGroup } from 'react-bootstrap';
+
 
 function App() {
 
@@ -25,6 +27,9 @@ useEffect(() => {
 
 if (popularMovies) {
   console.log(typeof(popularMovies))
+
+
+
   return <PopularList PopularList={popularMovies} handleClick={BigMovie}/>
 } else {
   return null;
