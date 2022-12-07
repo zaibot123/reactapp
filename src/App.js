@@ -10,6 +10,7 @@ import NavBar from './Components/navbar';
 import PopularList from './Components/PopularList';
 import MovieBigPoster  from './Components/MovieBigPoster';
 import { ListGroup } from 'react-bootstrap';
+import UserProfile from './Components/UserProfile';
 
 
 function App() {
@@ -57,7 +58,7 @@ function BigMovie () {
     
   useEffect(() => {
     const fetchData = async () => { 
-      const response = await fetch("http://localhost:5001/api/movies?searchtype=simple&username=henrik&title="+search+"&page=1&pageSize=10");
+      const response = await fetch("http://localhost:5001/api/movies?searchtype=simple&username=Maria&title="+search+"&page=1&pageSize=10");
       const newData = await response.json();  
       setResult(newData['items'])
       setStatus('Done')
@@ -82,6 +83,7 @@ function BigMovie () {
       <Routes>
       <Route path="/"     element={<Main />} />
       
+      <Route path="/user/:userName"   element={<UserProfile/>} />
       <Route path="/search/:search"   element={<Search/>} />
       <Route path="api/movies/:uid"   element={<BigMovie/>} />
       <Route path="/movie"   element={<BigMovie/>} />
