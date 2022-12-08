@@ -12,6 +12,9 @@ import MovieBigPoster  from './Components/MovieBigPoster';
 import { ListGroup } from 'react-bootstrap';
 import UserProfile from './Components/UserProfile';
 
+import PosterCardList from'./Components/PosterCardList';
+
+
 
 function App() {
 
@@ -84,6 +87,7 @@ function BigMovie () {
       <Route path="/"     element={<Main />} />
       
       <Route path="/user/:userName"   element={<UserProfile/>} />
+      <Route path="/test/:userName"   element={<PosterCardList/>} />
       <Route path="/search/:search"   element={<Search/>} />
       <Route path="api/movies/:uid"   element={<BigMovie/>} />
       <Route path="/movie"   element={<BigMovie/>} />
