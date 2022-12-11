@@ -127,25 +127,19 @@ export default function UserProfile() {
                   <MDBCardBody>
                     <MDBCardText className="mb-4"><span className="text-primary font-italic me-1">List of</span> Bookmarks</MDBCardText>
                     <MDBCardText className="mb-1" style={{ fontSize: '.77rem' }}>
-                    {console.log(listOfBookmarks + " Dette er list of bookmarks")}
-                      {/* {listOfBookmarks.map(X => <Movie PopularMovie={X} key={X.titleId} />)} */}
-                      {<PopularList PopularList={listOfBookmarks}/>}
+          
+                    {/* <PopularList PopularList={listOfBookmarks}/> */}
+                 
                     </MDBCardText>
-                   
                   </MDBCardBody>
                 </MDBCard>
-
-
-              </MDBCol>
-
-              <MDBCol md="6">
+             </MDBCol>
+            <MDBCol md="6">
                 <MDBCard className="mb-4 mb-md-0">
                   <MDBCardBody>
                     <MDBCardText className="mb-4"><span className="text-primary font-italic me-1">List of</span> Ratings</MDBCardText>
-                    <MDBCardText className="mb-1" style={{ fontSize: '.77rem' }}> 
-
-                    {/* {<PopularList PopularList={listOfBookmarks}/>} */}
-                    
+                    <MDBCardText className="mb-1" style={{ fontSize: '.89rem' }}>
+                    {/* <PopularList PopularList={listOfBookmarks}/> */}
                     </MDBCardText>
                   </MDBCardBody>
                 </MDBCard>
