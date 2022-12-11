@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const MovieWithRating = ({PopularMovie,handleClick}) =>{
+const MovieNoRating = ({PopularMovie,handleClick}) =>{
   let URLwithRightPORT=PopularMovie.url.replace (5001,3000)
 
 
@@ -10,9 +10,9 @@ return (
 <NavLink className="btn" to ="movies/tt2301451"></NavLink>
 
   <a href={URLwithRightPORT}>{PopularMovie.titleName}</a>
-  -  Rating: {PopularMovie.rating}
+
 </div>
     )
 }
-export default MovieWithRating;
+export default MovieNoRating;
         

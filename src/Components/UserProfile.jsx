@@ -24,6 +24,9 @@ import PosterCard from './PosterCard';
 import PosterCardList from './PosterCardList';
 import TitleList from './TitleList';
 import PopularList from './PopularList';
+import MovieBigPoster from './MovieBigPoster';
+import Movie from './Movie';
+
 
 export default function UserProfile() {
 
@@ -33,31 +36,47 @@ export default function UserProfile() {
   let [bio, setBio]=useState(null)
   let [poster, setPoster]=useState(null)
   let [movieTitle, setMovieTitle]=useState(null)
+  let[listOfBookmarks, setListOfBookmarks]=useState("tom")
+  let[listOfRatings, setListOfRatings]=useState("tom")
   const {userName} = useParams()
 
   useEffect(() => {
     const fetchData = async () => { 
 
-      const response1 = await fetch("http://localhost:5001/api/user/bookmarks/"+userName);
-      const newData1 = await response1.json();
-      setPoster(newData1[0].poster)
-      console.log(newData1[0].poster)
-      setMovieTitle(newData1['titleName'])
+      const ratingResponse = await fetch("http://localhost:5001/api/user/"+userName);
+      const ratingData = await ratingResponse.json();  
+      setListOfRatings(ratingData['ratingList'])
 
-      const response = await fetch("http://localhost:5001/api/user/"+userName);
-      const newData = await response.json();  
-      setUsername(newData['userName'])
-      setBio(newData['bio'])
-      setEmail(newData['email'])
-      setPhoto(newData['photo'])
+   
+
+      const bookmarkResponse = await fetch("http://localhost:5001/api/user/bookmarks/"+userName);
+      const bookmarkData = await bookmarkResponse.json();
+      setPoster(bookmarkData[0].poster)
+      setMovieTitle(bookmarkData['titleName'])
+      setListOfBookmarks(bookmarkData)
+
+
+      const userResponse = await fetch("http://localhost:5001/api/user/"+userName);
+      const userData = await userResponse.json();  
+      setUsername(userData['userName'])
+      setBio(userData['bio'])
+      setEmail(userData['email'])
+      setPhoto(userData['photo'])
+
+
+    
 
     };
 
+
+
+//http://localhost:5001/api/user/Troels/ratings
     fetchData();
- 
+    
   },[username]);
 
-  console.log(poster+"Dette er title")
+
+ 
   
   return (
 
@@ -107,30 +126,12 @@ export default function UserProfile() {
                 <MDBCard className="mb-4 mb-md-0">
                   <MDBCardBody>
                     <MDBCardText className="mb-4"><span className="text-primary font-italic me-1">List of</span> Bookmarks</MDBCardText>
-                    <MDBCardText className="mb-1" style={{ fontSize: '.77rem' }}>Web Design</MDBCardText>
-                    <MDBProgress className="rounded">
-                      <MDBProgressBar width={80} valuemin={0} valuemax={100} />
-                    </MDBProgress>
-
-                    <MDBCardText className="mt-4 mb-1" style={{ fontSize: '.77rem' }}>Website Markup</MDBCardText>
-                    <MDBProgress className="rounded">
-                      <MDBProgressBar width={72} valuemin={0} valuemax={100} />
-                    </MDBProgress>
-
-                    <MDBCardText className="mt-4 mb-1" style={{ fontSize: '.77rem' }}>One Page</MDBCardText>
-                    <MDBProgress className="rounded">
-                      <MDBProgressBar width={89} valuemin={0} valuemax={100} />
-                    </MDBProgress>
-
-                    <MDBCardText className="mt-4 mb-1" style={{ fontSize: '.77rem' }}>Mobile Template</MDBCardText>
-                    <MDBProgress className="rounded">
-                      <MDBProgressBar width={55} valuemin={0} valuemax={100} />
-                    </MDBProgress>
-
-                    <MDBCardText className="mt-4 mb-1" style={{ fontSize: '.77rem' }}>Backend API</MDBCardText>
-                    <MDBProgress className="rounded">
-                      <MDBProgressBar width={66} valuemin={0} valuemax={100} />
-                    </MDBProgress>
+                    <MDBCardText className="mb-1" style={{ fontSize: '.77rem' }}>
+                    {console.log(listOfBookmarks + " Dette er list of bookmarks")}
+                      {/* {listOfBookmarks.map(X => <Movie PopularMovie={X} key={X.titleId} />)} */}
+                      {<PopularList PopularList={listOfBookmarks}/>}
+                    </MDBCardText>
+                   
                   </MDBCardBody>
                 </MDBCard>
 
@@ -141,30 +142,11 @@ export default function UserProfile() {
                 <MDBCard className="mb-4 mb-md-0">
                   <MDBCardBody>
                     <MDBCardText className="mb-4"><span className="text-primary font-italic me-1">List of</span> Ratings</MDBCardText>
-                    <MDBCardText className="mb-1" style={{ fontSize: '.77rem' }}>Web Design</MDBCardText>
-                    <MDBProgress className="rounded">
-                      <MDBProgressBar width={1000} valuemin={0} valuemax={100} />
-                    </MDBProgress>
+                    <MDBCardText className="mb-1" style={{ fontSize: '.77rem' }}> 
 
-                    <MDBCardText className="mt-4 mb-1" style={{ fontSize: '.77rem' }}>Website Markup</MDBCardText>
-                    <MDBProgress className="rounded">
-                      <MDBProgressBar width={72} valuemin={0} valuemax={100} />
-                    </MDBProgress>
-
-                    <MDBCardText className="mt-4 mb-1" style={{ fontSize: '.77rem' }}>One Page</MDBCardText>
-                    <MDBProgress className="rounded">
-                      <MDBProgressBar width={89} valuemin={0} valuemax={100} />
-                    </MDBProgress>
-
-                    <MDBCardText className="mt-4 mb-1" style={{ fontSize: '.77rem' }}>Mobile Template</MDBCardText>
-                    <MDBProgress className="rounded">
-                      <MDBProgressBar width={55} valuemin={0} valuemax={100} />
-                    </MDBProgress>
-
-                    <MDBCardText className="mt-4 mb-1" style={{ fontSize: '.77rem' }}>Backend API</MDBCardText>
-                    <MDBProgress className="rounded">
-                      <MDBProgressBar width={66} valuemin={0} valuemax={100} />
-                    </MDBProgress>
+                    {/* {<PopularList PopularList={listOfBookmarks}/>} */}
+                    
+                    </MDBCardText>
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>

@@ -32,7 +32,7 @@ useEffect(() => {
 },[]);
 
 if (popularMovies) {
-  return <PopularList PopularList={popularMovies} handleClick={BigMovie}/>
+  return <PopularList PopularList={popularMovies} handleClick={BigMovie} Title="Top 100 Movies"/>
 } else {
   return null;
 }
