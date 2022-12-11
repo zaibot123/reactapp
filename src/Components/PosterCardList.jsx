@@ -30,8 +30,7 @@ const PosterCardList =  () =>{
     return (
      <>
 
-   {poster}
-
+        {poster}
     </>
     )
     }

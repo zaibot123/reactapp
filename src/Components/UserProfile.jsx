@@ -2,6 +2,8 @@ import React from 'react';
 import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBBtn, MDBTypography } from 'mdb-react-ui-kit';
 import { useState, useEffect} from 'react';
 import {useParams} from "react-router-dom";
+import PosterCard from './PosterCard';
+import PosterCardList from './PosterCardList';
 
 
 export default function UserProfile() {
@@ -12,37 +14,37 @@ export default function UserProfile() {
   let [photo, setPhoto]=useState(null)
   let [bio, setBio]=useState(null)
   let [poster, setPoster]=useState(null)
-
-
+  let [movieTitle, setMovieTitle]=useState(null)
   const {userName} = useParams()
 
   useEffect(() => {
     const fetchData = async () => { 
+
+      const response1 = await fetch("http://localhost:5001/api/user/bookmarks/"+userName);
+      const newData1 = await response1.json();
+      setPoster(newData1[0].poster)
+      console.log(newData1[0].poster)
+      setMovieTitle(newData1['titleName'])
+
       const response = await fetch("http://localhost:5001/api/user/"+userName);
       const newData = await response.json();  
-
       setUsername(newData['userName'])
       setBio(newData['bio'])
+      setEmail(newData['email'])
       setPhoto(newData['photo'])
 
     };
+
     fetchData();
-
-      const fetchData2 = async () => { 
-      const response2 = await fetch("http://localhost:5001/api/user/bookmarks"+userName);
-      const newData2 = await response2.json();  
-     setPoster(newData2['Poster'])
-    };
-    fetchData2();
-
-
-
-
+ 
   },[username]);
 
+  console.log(poster+"Dette er title")
+  
   return (
     
     <div className="gradient-custom-2" style={{ backgroundColor: '#9de2ff' }}>
+     
       <MDBContainer className="py-5 h-100">
         <MDBRow className="justify-content-center align-items-center h-100">
           <MDBCol lg="9" xl="7">
@@ -57,13 +59,16 @@ export default function UserProfile() {
                 </div>
                 <div className="ms-3" style={{ marginTop: '130px' }}>
                   <MDBTypography tag="h5">{username}</MDBTypography>
+                  <MDBCardText>New York</MDBCardText>
                 </div>
+
               </div>
+           
               <div className="p-4 text-black" style={{ backgroundColor: '#f8f9fa' }}>
                 <div className="d-flex justify-content-end text-center py-1">
                   <div>
-                    <MDBCardText className="mb-1 h5">253</MDBCardText>
-                    <MDBCardText className="small text-muted mb-0">Number of bookmarks</MDBCardText>
+                    <MDBCardText className="mb-1 h5">1234</MDBCardText>
+                    <MDBCardText className="small text-muted mb-0">Numner of bookmarks</MDBCardText>
                   </div>
                   <div className="px-3">
                     <MDBCardText className="mb-1 h5">1026</MDBCardText>
@@ -89,6 +94,7 @@ export default function UserProfile() {
                 <MDBRow>
                   <MDBCol className="mb-2">
                     <MDBCardImage src={poster}
+                    
                       alt="image 1" className="w-100 rounded-3" />
                   </MDBCol>
                   <MDBCol className="mb-2">
