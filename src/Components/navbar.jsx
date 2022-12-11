@@ -51,7 +51,7 @@ function NavBar(){
                          Input = "text"
                         
                        />
-                       <Button variant="outline-success"  href={`/search/${Form.Input}`}>Search </Button>
+                       <Button variant="outline-success"  href={`/search/${"lo"}`}>Search </Button>
                        {console.log(Form.Control.Input)}
                        
                      </Form>

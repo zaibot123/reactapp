@@ -14,6 +14,7 @@ import UserProfile from './Components/UserProfile';
 
 import PosterCardList from'./Components/PosterCardList';
 import DropDownButton from './Components/DropDownButton';
+import LogIn from './Components/LogIn';
 
 
 
@@ -79,14 +80,14 @@ function BigMovie () {
   return (
     <div className="root">
       <NavBar/>
-      
       { /* ... and here is what happens when you click them */ }
       <Routes>
       <Route path="/"     element={<Main />} />
-      
       <Route path="/user/:userName"   element={<UserProfile/>} />
+      <Route path="/user/login"   element={<LogIn/>} />
+      <Route path="/user/bookmarks/:userName"   element={<TitleList/>} />
       <Route path="/test/:userName"   element={<PosterCardList/>} />
-      <Route path="/dropdown"   element={<DropDownButton/>} />
+   
       <Route path="/search/:search"   element={<Search/>} />
       <Route path="api/movies/:uid"   element={<BigMovie/>} />
       <Route path="/movie"   element={<BigMovie/>} />
