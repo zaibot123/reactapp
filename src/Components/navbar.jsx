@@ -1,4 +1,4 @@
-import { FormLabel } from 'react-bootstrap';
+import { FormLabel, InputGroup } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -6,15 +6,24 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import {setMessage, useRef} from "react";
+import {onClick, onSubmit} from "react";
+import userEvent from '@testing-library/user-event';
+
 
 
 
 function NavBar(){
-   return (
 
+ 
+  
+   return (
+    
+     
          <>
            {['md'].map((expand) => (
              <Navbar key={expand} bg="light" expand={expand} className="mb-3">
+           
                
                <Container fluid>
                <Navbar.Brand href="/"> <img
@@ -31,36 +40,39 @@ function NavBar(){
                    placement="end"
                      >
                    <Offcanvas.Header closeButton>
-                    
                    </Offcanvas.Header>
                    <Offcanvas.Body>
                    <Form className="d-flex">
-                       <Form.Control
+                   <Form.Control
                          type="search"
                          placeholder="Search"
                          className="me-2"
-                         aria-label="Search"
+                         aria-label="Search"  
+                         Input = "text"
+                        
                        />
-                       <Button variant="outline-success" href = {`/search/${JSON.stringify(Offcanvas.id)}`}>Search </Button>
+                       <Button variant="outline-success"  href={`/search/${Form.Input}`}>Search </Button>
+                       {console.log(Form.Control.Input)}
+                       
                      </Form>
                      <Nav className="justify-content-end flex-grow-1 pe-3">
-                       <Nav.Link href="#action1">Home</Nav.Link>
-                       <Nav.Link href="#action2">Link</Nav.Link>
+                       <Nav.Link href="/">Home</Nav.Link>
+                      
                        <NavDropdown
-                         title="Dropdown"
+                         title="Menu"
                          id={`offcanvasNavbarDropdown-expand-${expand}`}
                        >
-                         <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                         <NavDropdown.Item href="#action4">
-                           Another action
+                         <NavDropdown.Item href="/user/register">Register new user</NavDropdown.Item>
+                         <NavDropdown.Item href="/user/edit">
+                           Edit user
+                         
                          </NavDropdown.Item>
                          <NavDropdown.Divider />
-                         <NavDropdown.Item href="#action5">
-                           Something else here
+                         <NavDropdown.Item href="/user/Troels">
+                           Log in
                          </NavDropdown.Item>
                        </NavDropdown>
                      </Nav>
-                     
                    </Offcanvas.Body>
                  </Navbar.Offcanvas>
                </Container>

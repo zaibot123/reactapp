@@ -31,10 +31,6 @@ useEffect(() => {
 },[]);
 
 if (popularMovies) {
-  console.log(typeof(popularMovies))
-
-
-
   return <PopularList PopularList={popularMovies} handleClick={BigMovie}/>
 } else {
   return null;
