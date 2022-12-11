@@ -1,3 +1,4 @@
+import { FormLabel } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -14,8 +15,9 @@ function NavBar(){
          <>
            {['md'].map((expand) => (
              <Navbar key={expand} bg="light" expand={expand} className="mb-3">
+               
                <Container fluid>
-               <Navbar.Brand href="#"> <img
+               <Navbar.Brand href="/"> <img
              src="https://forskning.ruc.dk/files-asset/80534321/mir_small.jpg?w=160&f=webp"
              width="50"
              height="50"
@@ -39,7 +41,7 @@ function NavBar(){
                          className="me-2"
                          aria-label="Search"
                        />
-                       <Button variant="outline-success">Search</Button>
+                       <Button variant="outline-success" href = {`/search/${JSON.stringify(Offcanvas.id)}`}>Search </Button>
                      </Form>
                      <Nav className="justify-content-end flex-grow-1 pe-3">
                        <Nav.Link href="#action1">Home</Nav.Link>
