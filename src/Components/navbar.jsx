@@ -6,7 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import {setMessage, useRef} from "react";
+import {setMessage, useRef, useState} from "react";
 import {onClick, onSubmit} from "react";
 import userEvent from '@testing-library/user-event';
 
@@ -15,6 +15,7 @@ import userEvent from '@testing-library/user-event';
 
 
 function NavBar(){
+   let [userInput, setUserInput] = useState("");
 
  
   
@@ -22,8 +23,6 @@ function NavBar(){
          <>
            {['md'].map((expand) => (
              <Navbar key={expand} bg="light" expand={expand} className="mb-3">
-     
-               
                <Container fluid>
                <Navbar.Brand href="/"> Gruppe 3 {/* <img
              src="https://forskning.ruc.dk/files-asset/80534321/mir_small.jpg?w=160&f=webp"
@@ -46,15 +45,14 @@ function NavBar(){
                          type="search"
                          placeholder="Search"
                          className="me-2"
-                         aria-label="Search"  
+                         aria-label="Search" 
+                         value={userInput}
+                         onChange={e => setUserInput(e.target.value)}  
                        />
-                       <Button  variant="outline-success" href={`/search/${"he"}`}>Search </Button>
-                       
-                       
+                       <Button  variant="outline-success" href={`/search/${userInput}`}>Search </Button>
                      </Form>
                      <Nav className="justify-content-end flex-grow-1 pe-3">
                        <Nav.Link href="/">Home</Nav.Link>
-                      
                        <NavDropdown
                          title="Menu"
                          id={`offcanvasNavbarDropdown-expand-${expand}`}
@@ -62,7 +60,6 @@ function NavBar(){
                          <NavDropdown.Item href="/user/register">Register new user</NavDropdown.Item>
                          <NavDropdown.Item href="/user/edit">
                            Edit user
-                         
                          </NavDropdown.Item>
                          <NavDropdown.Divider />
                          <NavDropdown.Item href="/user/Troels">
