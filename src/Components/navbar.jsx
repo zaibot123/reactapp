@@ -47,12 +47,8 @@ function NavBar(){
                          placeholder="Search"
                          className="me-2"
                          aria-label="Search"  
-                        
-                        
                        />
-                      
-                      
-                       <Button  variant="outline-success" href={`/search/${"lo"}`}>Search </Button>
+                       <Button  variant="outline-success" href={`/search/${"he"}`}>Search </Button>
                        
                        
                      </Form>
