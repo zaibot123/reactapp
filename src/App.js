@@ -7,7 +7,7 @@ import {
   Routes, Route, Link, NavLink, useParams, Outlet
 } from "react-router-dom";
 import NavBar from './Components/navbar'; 
-import PopularList from './Components/PopularList';
+import MovieList from './Components/MovieList';
 import MovieBigPoster  from './Components/MovieBigPoster';
 import { ListGroup } from 'react-bootstrap';
 import UserProfile from './Components/UserProfile';
@@ -15,70 +15,20 @@ import UserProfile from './Components/UserProfile';
 import PosterCardList from'./Components/PosterCardList';
 import DropDownButton from './Components/DropDownButton';
 import LogIn from './Components/LogIn';
+import UsernameContext from './Components/UsernameContext';
+import {useContext} from 'react';
+import Main from './Components/Main';
+import BigMovie from './Components/BigMovie';
+import Search from './Components/Search';
+
 
 
 
 function App() {
 
-function Main () {
-let [popularMovies, setPopularMovies]=useState(null);
-useEffect(() => {
-  const fetchData = async () => {
-    const response = await fetch('http://localhost:5001/api/movies/popular');
-    const newData = await response.json();
-    setPopularMovies(newData);  
-  };
-  fetchData();
-},[]);
-
-if (popularMovies) {
-  return <PopularList PopularList={popularMovies} handleClick={BigMovie} Title="Top 100 Movies"/>
-} else {
-  return null;
-}
-}
-
-
-
-function BigMovie () {
-  const { uid} = useParams();
-  return(
-  <div>
-<MovieBigPoster MovieID={String(uid)} />
-  </div>
-  )
-  }
-
-
-
-  function Search () {
-     let [result,setResult]=useState(null)
-     let [status, setStatus]=useState('Loading')
-
-    const {search} = useParams()
-    
-  useEffect(() => {
-    const fetchData = async () => { 
-      const response = await fetch("http://localhost:5001/api/movies?searchtype=simple&username=Maria&title="+search+"&page=1&pageSize=10");
-      const newData = await response.json();  
-      setResult(newData['items'])
-      setStatus('Done')
-    };
-    fetchData();
-  },[result]);
-
-  if (status==="Done") {
-    return <TitleList listOfResults={result}/>
-  } else {
-    return <h1>Loading</h1>;
-  }
-}
-
-
-
-  
   return (
     <div className="root">
+      <UsernameContext.Provider>
       <NavBar/>
       { /* ... and here is what happens when you click them */ }
       <Routes>
@@ -87,15 +37,12 @@ function BigMovie () {
       <Route path="/user/login"   element={<LogIn/>} />
       <Route path="/user/bookmarks/:userName"   element={<TitleList/>} />
       <Route path="/test/:userName"   element={<PosterCardList/>} />
-   
       <Route path="/search/:search"   element={<Search/>} />
-      <Route path="api/movies/:uid"   element={<BigMovie/>} />
+      <Route path="/movies/:uid"   element={<BigMovie/>} />
       <Route path="/movie"   element={<BigMovie/>} />
       </Routes>
+      </UsernameContext.Provider>
     </div>
-
   );
   }
-
-
 export default App;

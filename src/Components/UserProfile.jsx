@@ -1,21 +1,5 @@
 import React from 'react';
-import {
-  MDBCol,
-  MDBContainer,
-  MDBRow,
-  MDBCard,
-  MDBCardText,
-  MDBCardBody,
-  MDBCardImage,
-  MDBBtn,
-  MDBBreadcrumb,
-  MDBBreadcrumbItem,
-  MDBProgress,
-  MDBProgressBar,
-  MDBIcon,
-  MDBListGroup,
-  MDBListGroupItem
-} from 'mdb-react-ui-kit';
+import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBTypography, MDBIcon } from 'mdb-react-ui-kit';
 
 
 import { useState, useEffect} from 'react';
@@ -23,7 +7,7 @@ import {useParams} from "react-router-dom";
 import PosterCard from './PosterCard';
 import PosterCardList from './PosterCardList';
 import TitleList from './TitleList';
-import PopularList from './PopularList';
+import MovieList from './MovieList';
 import MovieBigPoster from './MovieBigPoster';
 import Movie from './Movie';
 
@@ -70,7 +54,7 @@ export default function UserProfile() {
 
 
 
-//http://localhost:5001/api/user/Troels/ratings
+
     fetchData();
     
   },[username]);
@@ -79,76 +63,62 @@ export default function UserProfile() {
  
   
   return (
+    <section className="vh-100" style={{ backgroundColor: '#f4f5f7' }}>
+      <MDBContainer className="py-5 h-100">
+        <MDBRow className="justify-content-center align-items-center h-10">
+          <MDBCol lg="6" className="mb-4 mb-lg-0">
+            <MDBCard className="mb-3" style={{ borderRadius: '.5rem' }}>
+              <MDBRow className="g-0">
+                <MDBCol md="4" className="gradient-custom text-center text-white"
+                  style={{ borderTopLeftRadius: '.5rem', borderBottomLeftRadius: '.5rem' }}>
+                  <MDBCardImage src={photo}
+                    alt="Avatar" className="my-5" style={{ width: '80px' }} fluid />
+                  <MDBTypography tag="h5">Marie Horwitz</MDBTypography>
+                  <MDBCardText>Web Designer</MDBCardText>
+                  <MDBIcon far icon="edit mb-5" />
+                </MDBCol>
+                <MDBCol md="8">
+                  <MDBCardBody className="p-4">
+                    <MDBTypography tag="h6">Information</MDBTypography>
+                    <hr className="mt-0 mb-4" />
+                    <MDBRow className="pt-1">
+                      <MDBCol size="6" className="mb-3">
+                        <MDBTypography tag="h6">Email</MDBTypography>
+                        <MDBCardText className="text-muted">info@example.com</MDBCardText>
+                      </MDBCol>
+                      <MDBCol size="6" className="mb-3">
+                        <MDBTypography tag="h6">Phone</MDBTypography>
+                        <MDBCardText className="text-muted">123 456 789</MDBCardText>
+                      </MDBCol>
+                    </MDBRow>
 
-    <section style={{ backgroundColor: '#eee' }}>
-      <MDBContainer className="py-3">
-        <MDBRow>
-          <MDBCol lg="4">
-            <MDBCard className="mb-4">
-              <MDBCardBody className="text-center">
-                <MDBCardImage
-                  src={photo}
-                  alt="avatar"
-                  className="rounded-circle"
-                  style={{ width: '150px' }}
-                  fluid />
-                <p className="text-muted mb-1">{bio}</p>
-              </MDBCardBody>
-            </MDBCard>
-          </MDBCol>
-          <MDBCol lg="8">
-            <MDBCard className="mb-4">
-              <MDBCardBody>
-                <MDBRow>
-                  <MDBCol sm="3">
-                    <MDBCardText>Username</MDBCardText>
-                  </MDBCol>
-                  <MDBCol sm="9">
-                    <MDBCardText className="text-muted">{username}</MDBCardText>
-                  </MDBCol>
-                </MDBRow>
-                <hr />
-                <MDBRow>
-                  <MDBCol sm="3">
-                    <MDBCardText>Email</MDBCardText>
-                  </MDBCol>
-                  <MDBCol sm="9">
-                    <MDBCardText className="text-muted">{email}</MDBCardText>
-                  </MDBCol>
-                </MDBRow>
-                <hr />
-              </MDBCardBody>
-            </MDBCard>
+                    <MDBTypography tag="h6">Information</MDBTypography>
+                    <hr className="mt-0 mb-4" />
+                    <MDBRow className="pt-1">
+                      <MDBCol size="6" className="mb-3">
+                        <MDBTypography tag="h6">Email</MDBTypography>
+                        <MDBCardText className="text-muted">info@example.com</MDBCardText>
+                      </MDBCol>
+                      <MDBCol size="6" className="mb-3">
+                        <MDBTypography tag="h6">Phone</MDBTypography>
+                        <MDBCardText className="text-muted">123 456 789</MDBCardText>
+                      </MDBCol>
+                    </MDBRow>
 
-            <MDBRow>
-              <MDBCol md="6">
-
-                <MDBCard className="mb-4 mb-md-0">
-                  <MDBCardBody>
-                    <MDBCardText className="mb-4"><span className="text-primary font-italic me-1">List of</span> Bookmarks</MDBCardText>
-                    <MDBCardText className="mb-1" style={{ fontSize: '.77rem' }}>
-          
-                    {/* <PopularList PopularList={listOfBookmarks}/> */}
-                 
-                    </MDBCardText>
+                    <div className="d-flex justify-content-start">
+                      <a href="#!"><MDBIcon fab icon="facebook me-3" size="lg" /></a>
+                      <a href="#!"><MDBIcon fab icon="twitter me-3" size="lg" /></a>
+                      <a href="#!"><MDBIcon fab icon="instagram me-3" size="lg" /></a>
+                    </div>
                   </MDBCardBody>
-                </MDBCard>
-             </MDBCol>
-            <MDBCol md="6">
-                <MDBCard className="mb-4 mb-md-0">
-                  <MDBCardBody>
-                    <MDBCardText className="mb-4"><span className="text-primary font-italic me-1">List of</span> Ratings</MDBCardText>
-                    <MDBCardText className="mb-1" style={{ fontSize: '.89rem' }}>
-                    {/* <PopularList PopularList={listOfBookmarks}/> */}
-                    </MDBCardText>
-                  </MDBCardBody>
-                </MDBCard>
-              </MDBCol>
-            </MDBRow>
+                </MDBCol>
+              </MDBRow>
+            </MDBCard>
           </MDBCol>
         </MDBRow>
       </MDBContainer>
     </section>
+
   );
 }
 
