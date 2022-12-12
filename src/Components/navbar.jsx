@@ -13,26 +13,25 @@ import userEvent from '@testing-library/user-event';
 
 
 
+
 function NavBar(){
 
  
   
    return (
-    
-     
          <>
            {['md'].map((expand) => (
              <Navbar key={expand} bg="light" expand={expand} className="mb-3">
-           
+     
                
                <Container fluid>
-               <Navbar.Brand href="/"> <img
+               <Navbar.Brand href="/"> Gruppe 3 {/* <img
              src="https://forskning.ruc.dk/files-asset/80534321/mir_small.jpg?w=160&f=webp"
              width="50"
              height="50"
              className="d-inline-block align-center"
              alt="Morten"  
-           /></Navbar.Brand>
+           /> */}</Navbar.Brand>
                  <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
                  <Navbar.Offcanvas
                    id={`offcanvasNavbar-expand-${expand}`}
@@ -48,11 +47,13 @@ function NavBar(){
                          placeholder="Search"
                          className="me-2"
                          aria-label="Search"  
-                         Input = "text"
+                        
                         
                        />
-                       <Button variant="outline-success"  href={`/search/${"lo"}`}>Search </Button>
-                       {console.log(Form.Control.Input)}
+                      
+                      
+                       <Button  variant="outline-success" href={`/search/${"lo"}`}>Search </Button>
+                       
                        
                      </Form>
                      <Nav className="justify-content-end flex-grow-1 pe-3">
