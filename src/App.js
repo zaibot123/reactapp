@@ -1,23 +1,18 @@
-import { useState,useEffect } from 'react';
+
 import './App.css';
 import TitleList from'./Components/TitleList';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import dataJson from './data.json'
 import { 
   Routes, Route, Link, NavLink, useParams, Outlet
 } from "react-router-dom";
 import NavBar from './Components/navbar'; 
-import MovieList from './Components/MovieList';
-import MovieBigPoster  from './Components/MovieBigPoster';
-import { ListGroup } from 'react-bootstrap';
 import UserProfile from './Components/UserProfile';
 import PosterCardList from'./Components/PosterCardList';
 import LogIn from './Components/LogIn';
-import UsernameContext from './Components/UsernameContext';
-import {useContext} from 'react';
 import Main from './Components/Main';
 import BigMovie from './Components/BigMovie';
 import Search from './Components/Search';
+import ListWithPoster from './Components/ListWithPoster';
 
 
 
@@ -38,6 +33,7 @@ function App() {
       <Route path="/search/:search"   element={<Search/>} />
       <Route path="/movies/:titleId"   element={<BigMovie/>} />
       <Route path="/movie"   element={<BigMovie/>} />
+      <Route path="/test"   element={<ListWithPoster/>} />
       </Routes>
       {/* </UsernameContext.Provider> */}
     </div>

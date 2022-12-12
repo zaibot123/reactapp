@@ -2,9 +2,10 @@ import React, {useEffect, useState} from "react";
 import MovieList from "./MovieList";
 import BigMovie from './BigMovie';
 import MovieSlideShow from "./MovieSlideShow";
-import ListWithPoster from "./ListWithPoster";
 import Row from 'react-bootstrap/Row';
+import useFetch from "./useFetch";
 import Col from 'react-bootstrap/Col';
+import ListOfPosters from "./ListWithPoster";
 
 
 
@@ -25,10 +26,10 @@ function Main () {
       <>
       <Row >
        <Col >
-        <MovieSlideShow />
+        <MovieSlideShow moviesForSlide={popularMovies.slice(0,4)}/>
        </Col>
       <Col >
-      <ListWithPoster />
+      <ListOfPosters />
       </Col>
       </Row>
 

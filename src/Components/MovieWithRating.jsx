@@ -3,7 +3,6 @@ import Card from 'react-bootstrap/Card';
 import Nav from 'react-bootstrap/Nav';
 
 const MovieWithRating = ({PopularMovie}) =>{
-
 let movieUrl = "/movies/"+PopularMovie.titleId
 
 return (
