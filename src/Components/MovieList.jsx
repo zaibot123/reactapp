@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Movie from "./MovieWithRating.jsx";
+import MovieWithRating from "./MovieWithRating.jsx";
 import MovieNoRating from "./MovieNoRating.jsx";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -19,8 +19,8 @@ if (Title)
     <div className = "rowList">
     <Row >
 
-    <Col > {first50Movies.map(PopularMovie => <Movie PopularMovie={PopularMovie} key={PopularMovie.url} handleClick={BigMovie} />)}</Col>
-    <Col>  {last50Movies.map(PopularMovie => <Movie PopularMovie={PopularMovie} key={PopularMovie.url} handleClick={BigMovie} />)}</Col>
+    <Col > {first50Movies.map(PopularMovie => <MovieWithRating PopularMovie={PopularMovie} key={PopularMovie.url} handleClick={BigMovie} />)}</Col>
+    <Col>  {last50Movies.map(PopularMovie => <MovieWithRating PopularMovie={PopularMovie} key={PopularMovie.url} handleClick={BigMovie} />)}</Col>
     
     </Row>
     </div>

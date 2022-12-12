@@ -1,18 +1,19 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import Card from 'react-bootstrap/Card';
+import Nav from 'react-bootstrap/Nav';
 
-const MovieNoRating = ({PopularMovie,handleClick}) =>{
-  let URLwithRightPORT=PopularMovie.url.replace (5001,3000)
+const MovieNoRating = ({PopularMovie,handleClick, titleId}) =>{
 
-
-return (
-<div>
-<NavLink className="btn" to ="movies/tt2301451"></NavLink>
-
-  <a href={URLwithRightPORT}>{PopularMovie.titleName}</a>
-
-</div>
+    let movieUrl = "/movies/"+PopularMovie.titleId
+    
+    return (
+    <Card>
+     <Card.Body>
+      <Nav.Link href={movieUrl}>{PopularMovie.titleName}</Nav.Link>
+        {PopularMovie.titleId}
+      </Card.Body>
+     </Card>  
     )
-}
+    }
 export default MovieNoRating;
         

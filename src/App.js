@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className="root">
-      <UsernameContext.Provider>
+      {/* <UsernameContext.Provider> */}
       <NavBar/>
       { /* ... and here is what happens when you click them */ }
       <Routes>
@@ -38,10 +38,10 @@ function App() {
       <Route path="/user/bookmarks/:userName"   element={<TitleList/>} />
       <Route path="/test/:userName"   element={<PosterCardList/>} />
       <Route path="/search/:search"   element={<Search/>} />
-      <Route path="api/movies/:titleId"   element={<BigMovie/>} />
+      <Route path="/movies/:titleId"   element={<BigMovie/>} />
       <Route path="/movie"   element={<BigMovie/>} />
       </Routes>
-      </UsernameContext.Provider>
+      {/* </UsernameContext.Provider> */}
     </div>
   );
   }
