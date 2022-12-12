@@ -2,6 +2,11 @@ import React, {useEffect, useState} from "react";
 import MovieList from "./MovieList";
 import BigMovie from './BigMovie';
 import MovieSlideShow from "./MovieSlideShow";
+import ListWithPoster from "./ListWithPoster";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+
 
 
 function Main () {
@@ -17,7 +22,17 @@ function Main () {
     
     if (popularMovies) {
       return (
-      <><MovieSlideShow /><MovieList PopularList={popularMovies} handleClick={BigMovie} Title="Top 100 Movies" /></>)
+      <>
+      <Row >
+       <Col >
+        <MovieSlideShow />
+       </Col>
+      <Col >
+      <ListWithPoster />
+      </Col>
+      </Row>
+
+      <MovieList PopularList={popularMovies} handleClick={BigMovie} Title="Top 100 Movies" /></>)
     } else {
       return null;
     }
