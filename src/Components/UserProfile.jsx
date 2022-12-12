@@ -9,7 +9,7 @@ import PosterCardList from './PosterCardList';
 import TitleList from './TitleList';
 import MovieList from './MovieList';
 import MovieBigPoster from './MovieBigPoster';
-import Movie from './Movie';
+import Movie from './MovieWithRating';
 
 
 export default function UserProfile() {

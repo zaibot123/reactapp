@@ -38,7 +38,7 @@ function App() {
       <Route path="/user/bookmarks/:userName"   element={<TitleList/>} />
       <Route path="/test/:userName"   element={<PosterCardList/>} />
       <Route path="/search/:search"   element={<Search/>} />
-      <Route path="/movies/:uid"   element={<BigMovie/>} />
+      <Route path="api/movies/:titleId"   element={<BigMovie/>} />
       <Route path="/movie"   element={<BigMovie/>} />
       </Routes>
       </UsernameContext.Provider>

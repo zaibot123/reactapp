@@ -1,5 +1,5 @@
 
-import Movie from "./Movie.jsx";
+import Movie from "./MovieWithRating.jsx";
 import { useState, useEffect} from 'react';
 import {useParams}  from "react-router-dom";
 import PosterCard from './PosterCard';

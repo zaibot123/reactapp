@@ -1,12 +1,13 @@
 import { useState } from "react";
-import Movie from "./Movie.jsx";
+import Movie from "./MovieWithRating.jsx";
 import MovieNoRating from "./MovieNoRating.jsx";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup';
+import BigMovie from "./BigMovie.jsx";
 
-const PopularList =  ({PopularList,BigMovie,Title}) =>{
-    const first50Movies = PopularList.slice(0, 50);
+const MovieList =  ({PopularList,Title}) =>{
+    const first50Movies = PopularList.slice(0, 49);
     const last50Movies = PopularList.slice(50, 100);
 if (Title)
 {
@@ -17,8 +18,10 @@ if (Title)
     </div>
     <div className = "rowList">
     <Row >
+
     <Col > {first50Movies.map(PopularMovie => <Movie PopularMovie={PopularMovie} key={PopularMovie.url} handleClick={BigMovie} />)}</Col>
-    <Col> {last50Movies.map(PopularMovie => <Movie PopularMovie={PopularMovie} key={PopularMovie.url} handleClick={BigMovie} />)}</Col>
+    <Col>  {last50Movies.map(PopularMovie => <Movie PopularMovie={PopularMovie} key={PopularMovie.url} handleClick={BigMovie} />)}</Col>
+    
     </Row>
     </div>
     </>
@@ -32,4 +35,4 @@ return(
     </>
 )}
 }
-    export default PopularList;
+    export default MovieList;
