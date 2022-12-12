@@ -2,6 +2,8 @@ import React, {useEffect, useState, useContext} from "react";
 import TitleList from "./TitleList";
 import UsernameContext from "./UsernameContext";
 import {useParams} from 'react-router-dom';
+import Spinner from 'react-bootstrap/Spinner';
+import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBTypography, MDBIcon } from 'mdb-react-ui-kit';
 
 
 function Search () {
@@ -24,8 +26,13 @@ function Search () {
 
  if (status==="Done") {
    return<TitleList listOfResults={result}/>
+   
  } else {
-   return <h1>Loading</h1>;
+   return (
+    <Spinner style={{position: 'absolute', left:'50%', top: '50%',}}>
+        <span className="visually-hidden">Loading...</span>
+    </Spinner>
+    )
  }
 }
 export default Search;

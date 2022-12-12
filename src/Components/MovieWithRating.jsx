@@ -11,7 +11,6 @@ return (
  <Card.Body>
   <Nav.Link href={movieUrl}>{PopularMovie.titleName}</Nav.Link>
     Rating: {PopularMovie.rating}
-    {PopularMovie.titleId}
   </Card.Body>
  </Card>  
 )
