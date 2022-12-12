@@ -11,9 +11,7 @@ import MovieList from './Components/MovieList';
 import MovieBigPoster  from './Components/MovieBigPoster';
 import { ListGroup } from 'react-bootstrap';
 import UserProfile from './Components/UserProfile';
-
 import PosterCardList from'./Components/PosterCardList';
-import DropDownButton from './Components/DropDownButton';
 import LogIn from './Components/LogIn';
 import UsernameContext from './Components/UsernameContext';
 import {useContext} from 'react';

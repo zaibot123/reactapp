@@ -16,9 +16,6 @@ import userEvent from '@testing-library/user-event';
 
 function NavBar(){
    let [userInput, setUserInput] = useState("");
-
- 
-  
    return (
          <>
            {['md'].map((expand) => (
@@ -47,7 +44,8 @@ function NavBar(){
                          className="me-2"
                          aria-label="Search" 
                          value={userInput}
-                         onChange={e => setUserInput(e.target.value)}  
+                         onChange={e => setUserInput(e.target.value)}
+                         
                        />
                        <Button  variant="outline-success" href={`/search/${userInput}`}>Search </Button>
                      </Form>

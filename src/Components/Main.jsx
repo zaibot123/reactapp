@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from "react";
 import MovieList from "./MovieList";
 import BigMovie from './BigMovie';
+import MovieSlideShow from "./MovieSlideShow";
+
 
 function Main () {
     let [popularMovies, setPopularMovies]=useState(null);
@@ -14,7 +16,8 @@ function Main () {
     },[]);
     
     if (popularMovies) {
-      return <MovieList PopularList={popularMovies} handleClick={BigMovie} Title="Top 100 Movies"/>
+      return (
+      <><MovieSlideShow /><MovieList PopularList={popularMovies} handleClick={BigMovie} Title="Top 100 Movies" /></>)
     } else {
       return null;
     }

@@ -1,7 +1,6 @@
 .App {
   text-align: center;
-  background-color:  whitesmoke;
-  
+  background-color: cadetblue;
 }
 .card{
 margin-block-start: 10px;
@@ -12,6 +11,9 @@ margin-inline-start: 30px;
   inline-size: 400px;
   block-size:200px;
 }
+
+
+
 
 .card-columns {
   @include media-breakpoint-only(lg) {

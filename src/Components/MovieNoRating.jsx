@@ -2,7 +2,7 @@ import React from "react";
 import Card from 'react-bootstrap/Card';
 import Nav from 'react-bootstrap/Nav';
 
-const MovieNoRating = ({PopularMovie,handleClick, titleId}) =>{
+const MovieNoRating = ({PopularMovie, titleId}) =>{
 
     let movieUrl = "/movies/"+PopularMovie.titleId
     
