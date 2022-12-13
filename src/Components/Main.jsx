@@ -5,7 +5,7 @@ import MovieSlideShow from "./MovieSlideShow";
 import Row from 'react-bootstrap/Row';
 import useFetch from "./useFetch";
 import Col from 'react-bootstrap/Col';
-import ListOfPosters from "./ListWithPoster";
+import ListOfPosters from "./ListWithPosterFetch";
 
 
 
@@ -29,10 +29,9 @@ function Main () {
         <MovieSlideShow moviesForSlide={popularMovies.slice(0,4)}/>
        </Col>
       <Col >
-      <ListOfPosters />
+      <ListOfPosters urlToFetch={"http://localhost:5001/api/movies/tt2301451/similar"}/>
       </Col>
       </Row>
-
       <MovieList PopularList={popularMovies} handleClick={BigMovie} Title="Top 100 Movies" /></>)
     } else {
       return null;
