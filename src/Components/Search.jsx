@@ -24,8 +24,22 @@ function Search () {
    fetchData();
  },[result, username]);
 
- if (status==="Done") {
-   return<TitleList listOfResults={result}/>
+ function sliceIntoChunks(arr, chunkSize) {
+  const res = [];
+  for (let i = 0; i < arr.length; i += chunkSize) {
+      const chunk = arr.slice(i, i + chunkSize);
+      res.push(chunk);
+  }
+  return res;
+}
+
+const arr = <TitleList listOfResults={result}/>;
+
+console.log(sliceIntoChunks(arr, 3));
+
+ if (status==="Done") { return(
+  sliceIntoChunks(arr, 3)
+ )
    
  } else {
    return (
