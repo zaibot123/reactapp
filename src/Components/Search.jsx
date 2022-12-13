@@ -27,11 +27,13 @@ function Search () {
  },[result, username]);
 
  if (status==="Done") { 
+
+
+
  
   return(
 
     <TitleList listOfResults={result}/>
-
  )
    
  } else {
