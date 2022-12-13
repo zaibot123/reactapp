@@ -5,10 +5,17 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import ListSubheader from '@mui/material/ListSubheader';
 import Spinner from 'react-bootstrap/Spinner';
+import IconButton from '@mui/material/IconButton';
+import InfoIcon from '@mui/icons-material/Info';
+import { Nav } from "react-bootstrap";
+import { ListItemSecondaryAction } from "@mui/material";
 
 
 
 export default function ListOfPostersFetch({urlToFetch, title, width, height}){
+
+function handleClick(id){
+}
 const {result,loading,error} = useFetch(urlToFetch);
 if (loading!=="false") {
   return(
@@ -34,6 +41,15 @@ return (
       <ImageListItemBar
         title={item.titleName}
         subtitle={item.rating}
+        actionIcon={
+
+          <IconButton 
+            sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+            aria-label={`info about ${item.title}`}
+          >
+            <InfoIcon />
+          </IconButton>
+        }
       />
     </ImageListItem>
   ))}

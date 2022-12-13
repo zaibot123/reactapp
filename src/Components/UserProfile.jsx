@@ -152,16 +152,13 @@ export default function UserProfile() {
 
   return (
       <MDBContainer className="py-5 h-100">
-        <MDBRow className="justify-content-left align-items-center h-100">
+        <MDBRow className="justify-content-right align-items-center h-10">
           <MDBCol lg="1" xl="7">
-            <MDBCard>
         <ListWithPosterFetch urlToFetch={"http://localhost:5001/api/user/bookmarks/"+userName} title={"Bookmarks for "+userName}
-                                              width={300} heigth={400}></ListWithPosterFetch>
-            </MDBCard>
-            <MDBCard>
+                                              width={395} heigth={420}></ListWithPosterFetch>
+
         <ListWithPosterFetch urlToFetch={"http://localhost:5001/api/user/"+userName+"/ratings"} title={"Ratings for "+userName}
-                                              width={300} heigth={400}></ListWithPosterFetch>
-            </MDBCard>
+                                              width={395} heigth={420}></ListWithPosterFetch>
           </MDBCol>
         </MDBRow>
       </MDBContainer>
