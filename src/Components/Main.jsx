@@ -29,7 +29,7 @@ function Main () {
         <MovieSlideShow moviesForSlide={popularMovies.slice(0,4)}/>
        </Col>
       <Col >
-      <ListOfPosters urlToFetch={"http://localhost:5001/api/movies/tt2301451/similar"}/>
+      <ListOfPosters urlToFetch={"http://localhost:5001/api/movies/tt2301451/similar"} width={250} height={400}/>
       </Col>
       </Row>
       <MovieList PopularList={popularMovies} handleClick={BigMovie} Title="Top 100 Movies" /></>)

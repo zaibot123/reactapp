@@ -147,16 +147,9 @@ export default function UserProfile() {
   const {userName} = useParams()
 
     const {result,loading,error} = useFetch("http://localhost:5001/api/user/bookmarks/"+userName);
-
    console.log(result)
 
-    // {poster: result.map(x=>x.poster),
-    //  lastName:"Doe"};
 
-    //  console.log(person)
-
-
-  
   return (
       <MDBContainer className="py-5 h-100">
         <MDBRow className="justify-content-left align-items-center h-100">

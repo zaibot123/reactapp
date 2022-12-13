@@ -12,7 +12,7 @@ import LogIn from './Components/LogIn';
 import Main from './Components/Main';
 import BigMovie from './Components/BigMovie';
 import Search from './Components/Search';
-import ListWithPoster from './Components/ListWithPoster';
+import ListWithPoster from './Components/ListWithPosterFetch';
 
 
 
