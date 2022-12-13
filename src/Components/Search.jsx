@@ -4,6 +4,8 @@ import UsernameContext from "./UsernameContext";
 import {useParams} from 'react-router-dom';
 import Spinner from 'react-bootstrap/Spinner';
 import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBTypography, MDBIcon } from 'mdb-react-ui-kit';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 
 function Search () {
@@ -24,21 +26,12 @@ function Search () {
    fetchData();
  },[result, username]);
 
- function sliceIntoChunks(arr, chunkSize) {
-  const res = [];
-  for (let i = 0; i < arr.length; i += chunkSize) {
-      const chunk = arr.slice(i, i + chunkSize);
-      res.push(chunk);
-  }
-  return res;
-}
+ if (status==="Done") { 
+ 
+  return(
 
-const arr = <TitleList listOfResults={result}/>;
+    <TitleList listOfResults={result}/>
 
-console.log(sliceIntoChunks(arr, 3));
-
- if (status==="Done") { return(
-  sliceIntoChunks(arr, 3)
  )
    
  } else {
