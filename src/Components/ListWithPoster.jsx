@@ -21,7 +21,7 @@ else{
 return (
   <ImageList sx={{ width: 500, height: 450 }}>
   <ImageListItem key="Subheader" cols={2}>
-    <ListSubheader component="div">December</ListSubheader>
+    <ListSubheader component="div">Newest on Movie App</ListSubheader>
   </ImageListItem>
   {result.map((item) => (
     <ImageListItem key={item.poster}>
