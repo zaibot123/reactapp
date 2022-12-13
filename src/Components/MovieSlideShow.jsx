@@ -32,8 +32,10 @@ function MovieSlideShow() {
     
   
   return (
-    
-    <Card  style={{left:'15%', width: '400px'}}>
+  
+    <Card  class="card w-55"style={{left:'15%', width: '400px'}}>
+       
+  
     <Carousel>
       <Carousel.Item>
       <Card.Img key = "1" variant="top" src={poster1} />
@@ -55,7 +57,9 @@ function MovieSlideShow() {
       </Card.Body>
       </Carousel.Item>
     </Carousel>
+   
     </Card>
+  
   );
 }
 

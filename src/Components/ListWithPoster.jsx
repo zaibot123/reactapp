@@ -19,7 +19,7 @@ if (loading!=="false") {
   }
 else{
 return (
-  <ImageList sx={{ width: 500, height: 450 }}>
+  <ImageList sx={{ width: 500, height: 650 }}>
   <ImageListItem key="Subheader" cols={2}>
     <ListSubheader component="div">Newest on Movie App</ListSubheader>
   </ImageListItem>
