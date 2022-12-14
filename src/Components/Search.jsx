@@ -24,7 +24,7 @@ function Search () {
      
    };
    fetchData();
- },[result, username]);
+ },[username]);
 
  if (status==="Done") { 
 
