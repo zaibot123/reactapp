@@ -23,7 +23,7 @@ useEffect(() => {
       fetchData()
     }, [])
 return { result,loading,error }
-  }
+}
 
 
 
