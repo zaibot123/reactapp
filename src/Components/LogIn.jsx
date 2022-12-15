@@ -2,20 +2,20 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import {useContext, useState} from'react';
 import UsernameContext from './UsernameContext';
+import { Nav } from 'react-bootstrap';
+import Main from './Main';
+
+import { Redirect } from 'react-router-dom';
+
+
 
 
 function LogIn() {
-
-
-
   let [username, setUsername] = useState("");
   let [password, setPassword] = useState("");
-
-  const [user,setUser] = useContext(UsernameContext);
   
 
-  const LoginFunction = async () => {
-  
+    const LoginFunction = async () => {
     const response = 
     await fetch("http://localhost:5001/api/user/login", { 
       method: "POST",
@@ -24,7 +24,13 @@ function LogIn() {
       },
       body: JSON.stringify({"userName": username, "password":password})
     })
-      console.log(user);
+   
+      if(response.status=="200"){
+
+          alert("welcome  "+ username);
+        
+      }
+  
     }
 
 
