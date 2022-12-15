@@ -11,8 +11,7 @@ function LogIn() {
   let [username, setUsername] = useState("");
   let [password, setPassword] = useState("");
 
-  const {user,setUser}
-  = useContext(UsernameContext);
+  const [user,setUser] = useContext(UsernameContext);
   
 
   const LoginFunction = async () => {
@@ -25,8 +24,7 @@ function LogIn() {
       },
       body: JSON.stringify({"userName": username, "password":password})
     })
-     
-    
+      console.log(user);
     }
 
 
