@@ -13,11 +13,14 @@ import Main from './Components/Main';
 import BigMovie from './Components/BigMovie';
 import Search from './Components/Search';
 import ListWithPoster from './Components/ListWithPosterFetch';
+import UsernameContext from './Components/UsernameContext';
 
 
 
 
 function App() {
+
+ 
 
   return (
     <div className="root">

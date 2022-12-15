@@ -26,17 +26,11 @@ function Search() {
     console.log(currentPage);
     const response = await fetch(currentPage)
     const newData = await response.json();
-    // setResult(newData['items'])
-    // setNextPage(newData['next'])
-    // setPrevPage(newData['prev'])
     setStatus("Done");
     setAlt(newData);
-   
-
   }
 
   useEffect(() => {
-
     fetchPage();
   }, []);
 
@@ -44,12 +38,11 @@ function Search() {
 
     return (
       <>
-        <TitleList listOfResults={alt['items']} />
+        <TitleList  listOfResults={alt['items']} />
         <Button onClick={function () {
-          fetchPage();
           setCurrentPage(alt['prev']);
+          fetchPage();
         }}>Prev</Button>
-
 
         <Button onClick={function () {
           fetchPage();
