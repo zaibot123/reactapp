@@ -60,7 +60,7 @@ function NavBar(){
                            Edit user
                          </NavDropdown.Item>
                          <NavDropdown.Divider />
-                         <NavDropdown.Item href="/user/Troels">
+                         <NavDropdown.Item href="/user/login">
                            Log in
                          </NavDropdown.Item>
                        </NavDropdown>
