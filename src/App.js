@@ -14,7 +14,7 @@ import BigMovie from './Components/BigMovie';
 import Search from './Components/Search';
 import ListWithPoster from './Components/ListWithPosterFetch';
 import UsernameContext from './Components/UsernameContext';
-import { useContext } from 'react';
+import { useContext, useState, createContext} from 'react';
 
 
 
@@ -22,11 +22,12 @@ import { useContext } from 'react';
 
 function App() {
 
- 
+  const UsernameContext = createContext();
+  const [user, setUser] = useState("Maria");
 
   return (
     <div className="root">
-     
+     <UsernameContext.Provider value={{user,setUser}}>
       <NavBar/>
       { /* ... and here is what happens when you click them */ }
       <Routes>
@@ -40,7 +41,7 @@ function App() {
       <Route path="/movie"   element={<BigMovie/>} />
       <Route path="/test"   element={<ListWithPoster/>} />
       </Routes>
-     
+      </UsernameContext.Provider>
     </div>
   );
   }

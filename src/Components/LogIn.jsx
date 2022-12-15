@@ -1,13 +1,19 @@
 import Form from 'react-bootstrap/Form';
-import {useState} from 'react';
 import Button from 'react-bootstrap/Button';
+import {useContext, useState} from'react';
+import UsernameContext from './UsernameContext';
+
 
 function LogIn() {
 
 
-  
+
   let [username, setUsername] = useState("");
   let [password, setPassword] = useState("");
+
+  const {user,setUser}
+  = useContext(UsernameContext);
+  
 
   const LoginFunction = async () => {
   
@@ -19,6 +25,8 @@ function LogIn() {
       },
       body: JSON.stringify({"userName": username, "password":password})
     })
+     
+    
     }
 
 
