@@ -19,13 +19,14 @@ import { useContext } from 'react';
 
 
 
+
 function App() {
 
  
 
   return (
     <div className="root">
-       <UsernameContext.Provider>
+       {/* <UsernameContext.Provider value = "HER SKAL USERNAME FRA MAN LOGGER IND VÆRE"> */}
       <NavBar/>
       { /* ... and here is what happens when you click them */ }
       <Routes>
@@ -39,7 +40,7 @@ function App() {
       <Route path="/movie"   element={<BigMovie/>} />
       <Route path="/test"   element={<ListWithPoster/>} />
       </Routes>
-      </UsernameContext.Provider>
+      {/* </UsernameContext.Provider> */}
     </div>
   );
   }
