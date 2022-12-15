@@ -9,16 +9,19 @@ import Form from 'react-bootstrap/Form';
 const PutBookmark = async (MovieID) => {
   console.log(MovieID)
   const response = 
-  await fetch("http://localhost:5001/api/movies/bookmark"+ "?username=Troels&title_id="+String(MovieID), {method: "PUT"});}
+  await fetch("http://localhost:5001/api/movies/bookmark"+ "?username=Troels&title_id="+String(MovieID), 
+  {method: "PUT"});}
 
 const DeleteBookmark = async (MovieID) => {
   const response = 
-  await fetch("http://localhost:5001/api/movies/bookmark"+ "?username=Troels&title_id="+String(MovieID), {method: "DELETE"});}
+  await fetch("http://localhost:5001/api/movies/bookmark"+ "?username=Troels&title_id="+String(MovieID), 
+  {method: "DELETE"});}
 
 const PostRating = async (MovieID,Rating) => {
 const rating=10;
 const response = 
-await fetch("http://localhost:5001/api/user/rate?title_id="+String(MovieID)+"&username=Troels&rating="+String(Rating), {method: "POST"});
+await fetch("http://localhost:5001/api/user/rate?title_id="+String(MovieID)+"&username=Troels&rating="+String(Rating), 
+{method: "POST"});
 }
 
   

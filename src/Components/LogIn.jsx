@@ -5,8 +5,23 @@ import Button from 'react-bootstrap/Button';
 function LogIn() {
   let [username, setUsername] = useState("");
   let [password, setPassword] = useState("");
+  
+
+  const LoginFunction = async () => {
+  
+    const response = 
+    await fetch("http://localhost:5001/api/user/login", { 
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({"userName": username, "password":password})
+    })
+    }
+
+
   return (
-    <Form style={{position: 'absolute', left:'40%', top: '40%',}}>
+    <Form style={{position: 'absolute', left:'42%', top: '30%',}}>
       <Form.Group className="mb-3" controlId="formGroupEmail">
         <Form.Label>Username</Form.Label>
         <Form.Control
@@ -32,7 +47,7 @@ function LogIn() {
                          
                        />
       </Form.Group>
-      <Button  variant="outline-success" href={`/user/${username}`}>Log in </Button>
+      <Button  variant="outline-success" onClick={()=>LoginFunction()}>Log in </Button>
     </Form>
   );
 }
