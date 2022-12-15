@@ -14,6 +14,7 @@ import BigMovie from './Components/BigMovie';
 import Search from './Components/Search';
 import ListWithPoster from './Components/ListWithPosterFetch';
 import UsernameContext from './Components/UsernameContext';
+import { useContext } from 'react';
 
 
 
@@ -24,7 +25,7 @@ function App() {
 
   return (
     <div className="root">
-      <UsernameContext.Provider>
+       <UsernameContext.Provider>
       <NavBar/>
       { /* ... and here is what happens when you click them */ }
       <Routes>
