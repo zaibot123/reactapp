@@ -11,6 +11,9 @@ import {onClick, onSubmit} from "react";
 import userEvent from '@testing-library/user-event';
 import UsernameContext from './UsernameContext';
 import { redirect } from "react-router-dom";
+import { Navigate } from 'react-router-dom'; 
+import React from 'react';
+import { MDBCheckbox } from 'mdb-react-ui-kit';
 
 
 
@@ -18,6 +21,7 @@ import { redirect } from "react-router-dom";
 
 
 function NavBar(){
+   let [searchtype, setSearchtype] = useState("");
    let [userInput, setUserInput] = useState("");
    let {getUser, setAUser} = useContext(UsernameContext);
    return (
@@ -51,8 +55,47 @@ function NavBar(){
                          onChange={e => setUserInput(e.target.value)}
                          
                        />
-                       <Button  variant="outline-success" href={`/search/${userInput}`}>Search </Button>
+
+                         {/* <NavDropdown
+                         title="Menu"
+                         id={`offcanvasNavbarDropdown-expand-${expand}`}
+                       >
+                         <NavDropdown.Item >Movies</NavDropdown.Item>
+                         <NavDropdown.Item href="/user/edit">
+                           Edit user
+                         </NavDropdown.Item>
+                         <NavDropdown.Divider />
+                         <NavDropdown.Item href="/user/login">
+                           Log in
+                         </NavDropdown.Item>
+                       </NavDropdown> */}
+                       <Button  variant="outline-success" >Search </Button>
                      </Form>
+{/* href={`/movies/search/${userInput}`} */}
+                     <Form>
+      {['radio'].map((type) => (
+        <div key={`inline-${type}`} className="mb-3">
+          <Form.Check
+            inline
+            label="Movies"
+            name="group1"
+            type={type}
+            id={`inline-${type}-1`}
+            onChange={() => setSearchtype("Movies")}
+          
+          />
+          <Form.Check
+            inline
+            label="Actors"
+            name="group1"
+            type={type}
+            id={`inline-${type}-2`}
+            onChange={() => setSearchtype("Actors")}
+          />
+        
+        </div>
+      ))}
+    </Form>
                      <Nav className="justify-content-end flex-grow-1 pe-3">
                        <Nav.Link href="/">Home</Nav.Link>
                        <NavDropdown
