@@ -15,6 +15,7 @@ import Search from './Components/Search';
 import ListWithPoster from './Components/ListWithPosterFetch';
 import UsernameContext from './Components/UsernameContext';
 import { useContext, useState, createContext} from 'react';
+import RegisterUser from './Components/RegisterUser';
 
 
 
@@ -24,6 +25,7 @@ function App() {
 
   const UsernameContext = createContext();
   const [user, setUser] = useState("Maria");
+
 
   return (
     <div className="root">
@@ -39,7 +41,7 @@ function App() {
       <Route path="/search/:search"   element={<Search/>} />
       <Route path="/movies/:titleId"   element={<BigMovie/>} />
       <Route path="/movie"   element={<BigMovie/>} />
-      <Route path="/test"   element={<ListWithPoster/>} />
+      <Route path="/register"   element={<RegisterUser/>} />
       </Routes>
       </UsernameContext.Provider>
     </div>
