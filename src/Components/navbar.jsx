@@ -118,7 +118,7 @@ function NavBar(){
                          id={`offcanvasNavbarDropdown-expand-${expand}`}
                        >
                          <NavDropdown.Item href="/register">Register new user</NavDropdown.Item>
-                         <NavDropdown.Item href="/user/edit">
+                         <NavDropdown.Item onClick={()=>navigate("/user/edit/"+getUser)}>
                            Edit user
                          </NavDropdown.Item>
                          <NavDropdown.Divider />
