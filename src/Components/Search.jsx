@@ -13,7 +13,6 @@ import Col from 'react-bootstrap/Col';
 
 function Search() {
   let {getUser, setAUser} = useContext(UsernameContext);
-  let [result, setResult] = useState(null)
   let [status, setStatus] = useState('Loading')
   let [nextPage, setNextPage] = useState(null)
   let [prevPage, setPrevPage] = useState(null)
@@ -41,6 +40,7 @@ function Search() {
     return (
       <>
         <TitleList  listOfResults={alt['items']} />
+        
         <Button onClick={function () {
           setCurrentPage(alt['prev']);
           fetchPage();
