@@ -50,10 +50,7 @@ export default function UserProfile() {
       setPhoto(userData['photo'])
 
     };
-
-
-
-
+    
     fetchData();
     
   },[username]);

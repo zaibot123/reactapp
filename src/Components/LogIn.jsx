@@ -5,7 +5,6 @@ import UsernameContext from './UsernameContext';
 import { Nav } from 'react-bootstrap';
 import Main from './Main';
 
-import { Redirect } from 'react-router-dom';
 
 
 
@@ -28,9 +27,8 @@ function LogIn() {
       if(response.status=="200"){
 
           alert("welcome  "+ username);
-        
+       
       }
-  
     }
 
 
