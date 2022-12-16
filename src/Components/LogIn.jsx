@@ -5,14 +5,18 @@ import UsernameContext from './UsernameContext';
 import { Nav } from 'react-bootstrap';
 import Main from './Main';
 import * as React from "react";
-import { Navigate } from "react-router-dom";
-import { redirect } from "react-router-dom";
+import Route, { Navigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+
+
+
 
 
 
 function LogIn() {
   let [username, setUsername] = useState("");
   let [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   let {getUser, setAUser} = useContext(UsernameContext);
 
@@ -29,7 +33,7 @@ function LogIn() {
       if(response.status=="200"){
    
           setAUser(username);
-          return redirect("/");
+          navigate("/");
       }
     }
 

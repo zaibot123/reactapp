@@ -7,8 +7,8 @@ import Actor from "./Actor";
 
 const ActorList =  ({listOfResults}) =>{
 
-const first50Movies =  listOfResults.slice(0, 50);
-const last50Movies = listOfResults.slice(50, 100);
+const first50Movies =  listOfResults.slice(0, 5);
+const last50Movies = listOfResults.slice(5, 10);
 return (
  <>
 <div className="list-title">

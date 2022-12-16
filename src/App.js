@@ -16,6 +16,7 @@ import ListWithPoster from './Components/ListWithPosterFetch';
 import UsernameContext from './Components/UsernameContext';
 import { useContext, useState, createContext} from 'react';
 import RegisterUser from './Components/RegisterUser';
+import ActorSearch from './Components/ActorSearch';
 
 
 
@@ -36,10 +37,12 @@ function App() {
       <Route path="/user/login"   element={<LogIn/>} />
       <Route path="/user/bookmarks/:userName"   element={<TitleList/>} />
       <Route path="/test/:userName"   element={<PosterCardList/>} />
-      <Route path="/search/:search"   element={<Search/>} />
+      <Route path="/movies/search/:search"   element={<Search/>} />
+      <Route path="/actor/search/:search"   element={<ActorSearch/>} />
       <Route path="/movies/:titleId"   element={<BigMovie/>} />
       <Route path="/movie"   element={<BigMovie/>} />
       <Route path="/register"   element={<RegisterUser/>} />
+   
       </Routes>
       </UsernameContext.Provider>
     </div>
