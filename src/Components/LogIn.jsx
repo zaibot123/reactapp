@@ -12,7 +12,6 @@ import { useNavigate } from "react-router-dom";
 
 
 
-
 function LogIn() {
   let [username, setUsername] = useState("");
   let [password, setPassword] = useState("");
