@@ -11,7 +11,7 @@ import {onClick, onSubmit} from "react";
 import userEvent from '@testing-library/user-event';
 import UsernameContext from './UsernameContext';
 import { redirect } from "react-router-dom";
-import { Navigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom'; 
 import React from 'react';
 import { MDBCheckbox } from 'mdb-react-ui-kit';
 
@@ -21,15 +21,30 @@ import { MDBCheckbox } from 'mdb-react-ui-kit';
 
 
 function NavBar(){
-   let [searchtype, setSearchtype] = useState("");
+   let [searchtype, setSearchtype] = useState("Movies");
    let [userInput, setUserInput] = useState("");
    let {getUser, setAUser} = useContext(UsernameContext);
+   const navigate = useNavigate();
+
+   function search(){
+
+    if (searchtype=="Movies"){
+      console.log("Searching for " +userInput +"Movie")
+    navigate("/movies/search/"+userInput)
+    }
+   
+    else if(searchtype=="Actors"){
+      console.log("Searching for " +userInput +"actor")
+      navigate("actors/search/"+userInput)
+    }
+  }
+
    return (
          <>
            {['md'].map((expand) => (
              <Navbar key={expand} bg="light" expand={expand} className="mb-3">
                <Container fluid>
-               <Navbar.Brand href="/"> {getUser} {/* <img
+              <Navbar.Brand onClick={()=>navigate("/user/"+ getUser)}> {getUser} {/* <img
              src="https://forskning.ruc.dk/files-asset/80534321/mir_small.jpg?w=160&f=webp"
              width="50"
              height="50"
@@ -69,7 +84,7 @@ function NavBar(){
                            Log in
                          </NavDropdown.Item>
                        </NavDropdown> */}
-                       <Button  variant="outline-success" >Search </Button>
+                       <Button  onClick={()=>search()} variant="outline-success" >Search </Button>
                      </Form>
 {/* href={`/movies/search/${userInput}`} */}
                      <Form>

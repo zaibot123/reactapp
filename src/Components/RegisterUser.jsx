@@ -14,6 +14,8 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import Form from 'react-bootstrap/Form';
 import {useState} from 'react';
 import Spinner from 'react-bootstrap/Spinner';
+import { useNavigate } from "react-router-dom";
+
 
 
 function RegisterUser() {
@@ -21,8 +23,7 @@ function RegisterUser() {
     let [password,setPassword]=useState(null)
     let [password2, setPassword2] = useState(null);
     let [status, setStatus] = useState("Done");
-
-  
+    const navigate = useNavigate();
     
     const RegisterUserFunction = async () => {
     
@@ -45,6 +46,7 @@ function RegisterUser() {
             setStatus("Done");
                 //redirect to login
               alert(username + " registered");
+              navigate("/user/login");
           }
           else { setStatus("Done"); alert("Weak password or already registered")}
          

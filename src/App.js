@@ -38,7 +38,7 @@ function App() {
       <Route path="/user/bookmarks/:userName"   element={<TitleList/>} />
       <Route path="/test/:userName"   element={<PosterCardList/>} />
       <Route path="/movies/search/:search"   element={<Search/>} />
-      <Route path="/actor/search/:search"   element={<ActorSearch/>} />
+      <Route path="/actors/search/:search"   element={<ActorSearch/>} />
       <Route path="/movies/:titleId"   element={<BigMovie/>} />
       <Route path="/movie"   element={<BigMovie/>} />
       <Route path="/register"   element={<RegisterUser/>} />

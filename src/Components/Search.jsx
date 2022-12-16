@@ -12,12 +12,12 @@ import Col from 'react-bootstrap/Col';
 
 
 function Search() {
-  let {getUser, setAUser} = useContext(UsernameContext);
+  let { getUser, setAUser } = useContext(UsernameContext);
   let [status, setStatus] = useState('Loading')
   let [nextPage, setNextPage] = useState(null)
   let [prevPage, setPrevPage] = useState(null)
   const { search } = useParams()
-  let [currentPage, setCurrentPage] = useState("http://localhost:5001/api/movies?searchtype=simple&username="+getUser+"&title=" + search + "&page=0&pageSize=10")
+  let [currentPage, setCurrentPage] = useState("http://localhost:5001/api/movies?searchtype=simple&username=" + getUser + "&title=" + search + "&page=0&pageSize=10")
   let [alt, setAlt] = useState(null);
 
 
@@ -39,8 +39,8 @@ function Search() {
 
     return (
       <>
-        <TitleList  listOfResults={alt['items']} />
-        
+        <TitleList listOfResults={alt['items']} />
+
         <Button onClick={function () {
           setCurrentPage(alt['prev']);
           fetchPage();
