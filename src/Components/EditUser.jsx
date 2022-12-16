@@ -27,7 +27,7 @@ function EditUser() {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({"username": getUser, "photo":photo,"bio":bio,"email":email})
+      body: JSON.stringify({"username": getUser,"email":email, "bio":bio, "photo":photo})
     })
           navigate("/user/"+getUser);
     }
