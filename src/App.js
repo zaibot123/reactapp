@@ -23,13 +23,11 @@ import RegisterUser from './Components/RegisterUser';
 
 function App() {
 
-  const UsernameContext = createContext();
   const [user, setUser] = useState("Maria");
-
 
   return (
     <div className="root">
-     <UsernameContext.Provider value={user}>
+     <UsernameContext.Provider value={{getUser:user, setAUser:setUser}}>
       <NavBar/>
       { /* ... and here is what happens when you click them */ }
       <Routes>

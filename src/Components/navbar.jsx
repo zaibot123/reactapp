@@ -6,9 +6,12 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import {setMessage, useRef, useState} from "react";
+import {setMessage, useRef, useState, useContext} from "react";
 import {onClick, onSubmit} from "react";
 import userEvent from '@testing-library/user-event';
+import UsernameContext from './UsernameContext';
+import { redirect } from "react-router-dom";
+
 
 
 
@@ -16,12 +19,13 @@ import userEvent from '@testing-library/user-event';
 
 function NavBar(){
    let [userInput, setUserInput] = useState("");
+   let {getUser, setAUser} = useContext(UsernameContext);
    return (
          <>
            {['md'].map((expand) => (
              <Navbar key={expand} bg="light" expand={expand} className="mb-3">
                <Container fluid>
-               <Navbar.Brand href="/"> Gruppe 3 {/* <img
+               <Navbar.Brand href="/"> {getUser} {/* <img
              src="https://forskning.ruc.dk/files-asset/80534321/mir_small.jpg?w=160&f=webp"
              width="50"
              height="50"

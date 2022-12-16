@@ -4,15 +4,17 @@ import {useContext, useState} from'react';
 import UsernameContext from './UsernameContext';
 import { Nav } from 'react-bootstrap';
 import Main from './Main';
-
-
+import * as React from "react";
+import { Navigate } from "react-router-dom";
+import { redirect } from "react-router-dom";
 
 
 
 function LogIn() {
   let [username, setUsername] = useState("");
   let [password, setPassword] = useState("");
-  let user = useContext(UsernameContext);
+
+  let {getUser, setAUser} = useContext(UsernameContext);
 
     const LoginFunction = async () => {
     const response = 
@@ -25,17 +27,15 @@ function LogIn() {
     })
    
       if(response.status=="200"){
-
-          console.log(user);
-         // setUser(username);
-          alert("welcome  "+ username);
-          console.log(user);
-          
+   
+          setAUser(username);
+          return redirect("/");
       }
     }
 
 
   return (
+
     <Form style={{position: 'absolute', left:'42%', top: '30%',}}>
       <Form.Group className="mb-3" controlId="formGroupEmail">
         <Form.Label>Username</Form.Label>

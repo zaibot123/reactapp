@@ -12,14 +12,16 @@ import Col from 'react-bootstrap/Col';
 
 
 function Search() {
+  let {getUser, setAUser} = useContext(UsernameContext);
   let [result, setResult] = useState(null)
   let [status, setStatus] = useState('Loading')
   let [nextPage, setNextPage] = useState(null)
   let [prevPage, setPrevPage] = useState(null)
   const { search } = useParams()
-  let [currentPage, setCurrentPage] = useState("http://localhost:5001/api/movies?searchtype=simple&username="+useContext(UsernameContext)+"&title=" + search + "&page=0&pageSize=10")
+  let [currentPage, setCurrentPage] = useState("http://localhost:5001/api/movies?searchtype=simple&username="+getUser+"&title=" + search + "&page=0&pageSize=10")
   let [alt, setAlt] = useState(null);
-  const username = useContext(UsernameContext);
+
+
 
   const fetchPage = async () => {
     setStatus("Loading");
