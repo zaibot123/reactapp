@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className="root">
-     <UsernameContext.Provider value={{user,setUser}}>
+     <UsernameContext.Provider value={user}>
       <NavBar/>
       { /* ... and here is what happens when you click them */ }
       <Routes>

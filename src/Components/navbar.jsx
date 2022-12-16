@@ -55,7 +55,7 @@ function NavBar(){
                          title="Menu"
                          id={`offcanvasNavbarDropdown-expand-${expand}`}
                        >
-                         <NavDropdown.Item href="/user/register">Register new user</NavDropdown.Item>
+                         <NavDropdown.Item href="/register">Register new user</NavDropdown.Item>
                          <NavDropdown.Item href="/user/edit">
                            Edit user
                          </NavDropdown.Item>

@@ -12,7 +12,7 @@ import Main from './Main';
 function LogIn() {
   let [username, setUsername] = useState("");
   let [password, setPassword] = useState("");
-  
+  let user = useContext(UsernameContext);
 
     const LoginFunction = async () => {
     const response = 
@@ -26,8 +26,11 @@ function LogIn() {
    
       if(response.status=="200"){
 
+          console.log(user);
+         // setUser(username);
           alert("welcome  "+ username);
-       
+          console.log(user);
+          
       }
     }
 
