@@ -110,9 +110,9 @@ if (status=="Done"){
       </MDBCard>
     </MDBContainer>
   );
-}
+    }
 
-return (
+    return (
     <Spinner style={{ position: 'absolute', left: '50%', top: '50%', }}>
       <span className="visually-hidden">Loading...</span>
     </Spinner>
