@@ -13,7 +13,6 @@ import Route, { Navigate } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 
 
-
 function EditUser() {
   let [email, setEmail] = useState("");
   let [photo, setPhoto] = useState("");
