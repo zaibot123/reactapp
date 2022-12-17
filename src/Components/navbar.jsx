@@ -97,18 +97,18 @@ function NavBar(){
       ))}
     </Form>
                      <Nav className="justify-content-end flex-grow-1 pe-3">
-                       <Nav.Link onClick={navigate("/")}>Home</Nav.Link>
+                       <Nav.Link onClick={()=>navigate("/")}>Home</Nav.Link>
                        <NavDropdown
                          title="Menu"
                          id={`offcanvasNavbarDropdown-expand-${expand}`}
                        >
-                         <NavDropdown.Item onClick={navigate("/register")}>Register new user</NavDropdown.Item>
+                         <NavDropdown.Item onClick={()=>navigate("/register")}>Register new user</NavDropdown.Item>
                          <NavDropdown.Item onClick={()=>navigate("/user/edit/"+getUser)}>
                            Edit user
                          </NavDropdown.Item>
                          <NavDropdown.Divider />
-                         <NavDropdown.Item onClick={navigate("/user/login")}>
-                          {console.log("Login er her")}
+                         <NavDropdown.Item onClick={()=>navigate("/user/login")}>
+
                            Log in
                          </NavDropdown.Item>
                        </NavDropdown>
