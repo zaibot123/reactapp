@@ -17,9 +17,7 @@ const Title = ({all}) =>{
   <div className="card-body">
   <img className="card-img-top" src={all.poster}/>
     <p className="card-text"> {all.plot.slice(0,100)}</p>
-{/* <button className="button-62" href = {movieUrl}>
-Se Mere
- </button> */}
+
   </div>
   </Nav.Link>
 </div>

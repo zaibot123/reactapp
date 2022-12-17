@@ -47,13 +47,7 @@ function NavBar(){
            {['md'].map((expand) => (
              <Navbar key={expand} bg="light" expand={expand} className="mb-3">
                <Container fluid>
-              <Navbar.Brand onClick={()=>navigate("/user/"+ getUser)}> {getUser} {/* <img
-             src="https://forskning.ruc.dk/files-asset/80534321/mir_small.jpg?w=160&f=webp"
-             width="50"
-             height="50"
-             className="d-inline-block align-center"
-             alt="Morten"  
-           /> */}</Navbar.Brand>
+              <Navbar.Brand onClick={()=>navigate("/user/"+ getUser)}> {getUser} </Navbar.Brand>
                  <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
                  <Navbar.Offcanvas
                    id={`offcanvasNavbar-expand-${expand}`}
@@ -74,22 +68,10 @@ function NavBar(){
                          
                        />
 
-                         {/* <NavDropdown
-                         title="Menu"
-                         id={`offcanvasNavbarDropdown-expand-${expand}`}
-                       >
-                         <NavDropdown.Item >Movies</NavDropdown.Item>
-                         <NavDropdown.Item href="/user/edit">
-                           Edit user
-                         </NavDropdown.Item>
-                         <NavDropdown.Divider />
-                         <NavDropdown.Item href="/user/login">
-                           Log in
-                         </NavDropdown.Item>
-                       </NavDropdown> */}
+                     
                        <Button  onClick={()=>search()} variant="outline-success" >Search </Button>
                      </Form>
-{/* href={`/movies/search/${userInput}`} */}
+
                      <Form>
       {['radio'].map((type) => (
         <div key={`inline-${type}`} className="mb-3">
@@ -126,6 +108,7 @@ function NavBar(){
                          </NavDropdown.Item>
                          <NavDropdown.Divider />
                          <NavDropdown.Item onClick={navigate("/user/login")}>
+                          {console.log("Login er her")}
                            Log in
                          </NavDropdown.Item>
                        </NavDropdown>
