@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 
 const Actor = ({all}) =>{
+  console.log(all)
   let actorURL = "/actor/"+all.id
   const navigate = useNavigate();
   

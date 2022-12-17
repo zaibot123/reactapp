@@ -18,6 +18,7 @@ import { useContext, useState, createContext} from 'react';
 import RegisterUser from './Components/RegisterUser';
 import ActorSearch from './Components/ActorSearch';
 import EditUser from './Components/EditUser';
+import ActorSingleView from './Components/ActorSingleView';
 
 
 
@@ -44,6 +45,7 @@ function App() {
       <Route path="/movie"   element={<BigMovie/>} />
       <Route path="/register"   element={<RegisterUser/>} />
       <Route path="/user/edit/:userName"   element={<EditUser/>} />
+      <Route path="/actor/:actorID"   element={<ActorSingleView/>} />
    
       </Routes>
       </UsernameContext.Provider>
