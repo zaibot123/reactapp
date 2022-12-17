@@ -20,6 +20,9 @@ import { MDBCheckbox } from 'mdb-react-ui-kit';
 
 
 
+
+
+
 function NavBar(){
    let [searchtype, setSearchtype] = useState("Movies");
    let [userInput, setUserInput] = useState("");
@@ -112,17 +115,17 @@ function NavBar(){
       ))}
     </Form>
                      <Nav className="justify-content-end flex-grow-1 pe-3">
-                       <Nav.Link href="/">Home</Nav.Link>
+                       <Nav.Link onClick={navigate("/")}>Home</Nav.Link>
                        <NavDropdown
                          title="Menu"
                          id={`offcanvasNavbarDropdown-expand-${expand}`}
                        >
-                         <NavDropdown.Item href="/register">Register new user</NavDropdown.Item>
+                         <NavDropdown.Item onClick={navigate("/register")}>Register new user</NavDropdown.Item>
                          <NavDropdown.Item onClick={()=>navigate("/user/edit/"+getUser)}>
                            Edit user
                          </NavDropdown.Item>
                          <NavDropdown.Divider />
-                         <NavDropdown.Item href="/user/login">
+                         <NavDropdown.Item onClick={navigate("/user/login")}>
                            Log in
                          </NavDropdown.Item>
                        </NavDropdown>

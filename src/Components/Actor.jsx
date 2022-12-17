@@ -1,10 +1,13 @@
 import React from "react";
 import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
+import Route, { Navigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 
 const Actor = ({all}) =>{
   let actorURL = "/actor/"+all.id
+  const navigate = useNavigate();
   const age =  () =>{
     if (all.birthYear!=="    " && all.deathYear!=="    ")
     {
@@ -17,10 +20,12 @@ const Actor = ({all}) =>{
     else return "unknown";      
   }
 
+  
+
 return (
       
 <div className="card">
-<Nav.Link  href={actorURL}>
+<Nav.Link  onClick={navigate(actorURL)}>
     <div className="title">
     {all.name} 
     </div>
