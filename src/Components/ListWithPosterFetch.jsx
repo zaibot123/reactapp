@@ -9,6 +9,7 @@ import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
 import { Nav } from "react-bootstrap";
 import { ListItemSecondaryAction } from "@mui/material";
+import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBTypography, MDBIcon } from 'mdb-react-ui-kit';
 
 
 
@@ -26,6 +27,7 @@ if (loading!=="false") {
   }
 else{
 return (
+  <MDBCard className="mb-3" style={{ borderRadius: '.5rem' }}>
   <ImageList sx={{ width: width, height: height }}>
   <ImageListItem key="Subheader" cols={2}>
     <ListSubheader component="div">{title}</ListSubheader>
@@ -54,6 +56,7 @@ return (
     </ImageListItem>
   ))}
 </ImageList>
+</MDBCard>
 );
 }
 }

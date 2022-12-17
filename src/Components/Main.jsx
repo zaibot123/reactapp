@@ -25,7 +25,7 @@ function Main () {
       return (
       <>
    
-        <MovieSlideShow moviesForSlide={popularMovies.slice(0,4)}/>
+        <MovieSlideShow moviesForSlide={popularMovies.slice(0,4)} style={{position: 'absolute', left:'50%', top: '50%',}} handleClick={BigMovie}/>
  
       <MovieList PopularList={popularMovies} handleClick={BigMovie} Title="Top 100 Movies" /></>)
     } else {

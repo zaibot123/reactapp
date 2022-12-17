@@ -56,12 +56,16 @@ export default function UserProfile() {
   },[username]);
 
 
- 
+ //Lave flere if statements/returns hvor vi tjekker om bookmarks/ratings er tom, og returnere 
   
   return (
+    
     <section className="vh-100" style={{ backgroundColor: '#f4f5f7' }}>
+      <div className="list-title">
+    <h1>{username}'s profile</h1>
+</div>
       <MDBContainer className="py-5 h-100">
-        <MDBRow className="justify-content-center align-items-center h-10">
+        <MDBRow className="justify-content-center align-items-center h-10" style={{position: 'absolute', left:'10%', top: '26%',}}>
           <MDBCol lg="6" className="mb-4 mb-lg-0">
             <MDBCard className="mb-3" style={{ borderRadius: '.5rem' }}>
               <MDBRow className="g-0">
@@ -92,12 +96,6 @@ export default function UserProfile() {
                         <MDBCardText className="text-muted">{bio}</MDBCardText>
                       </MDBCol>
                     </MDBRow>
-
-                    <div className="d-flex justify-content-start">
-                      <a href="#!"><MDBIcon fab icon="facebook me-3" size="lg" /></a>
-                      <a href="#!"><MDBIcon fab icon="twitter me-3" size="lg" /></a>
-                      <a href="#!"><MDBIcon fab icon="instagram me-3" size="lg" /></a>
-                    </div>
                   </MDBCardBody>
                 </MDBCol>
               </MDBRow>
@@ -110,6 +108,7 @@ export default function UserProfile() {
       <MDBContainer className="py-5 h-100">
         <MDBRow className="justify-content-right align-items-center h-10">
           <MDBCol lg="1" xl="7">
+
         <ListWithPosterFetch urlToFetch={"http://localhost:5001/api/user/bookmarks/"+userName} title={"Bookmarks for "+userName}
                                               width={395} heigth={420}></ListWithPosterFetch>
 
