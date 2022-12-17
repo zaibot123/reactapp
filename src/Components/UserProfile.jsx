@@ -37,10 +37,12 @@ export default function UserProfile() {
 
       const bookmarkResponse = await fetch("http://localhost:5001/api/user/bookmarks/"+userName);
       const bookmarkData = await bookmarkResponse.json();
+
+      if(bookmarkData['titleName']){
       setPoster(bookmarkData[0].poster)
       setMovieTitle(bookmarkData['titleName'])
       setListOfBookmarks(bookmarkData)
-
+      }
 
       const userResponse = await fetch("http://localhost:5001/api/user/"+userName);
       const userData = await userResponse.json();  
@@ -56,6 +58,7 @@ export default function UserProfile() {
   },[username]);
 
 
+
  //Lave flere if statements/returns hvor vi tjekker om bookmarks/ratings er tom, og returnere 
   
   return (
@@ -65,7 +68,7 @@ export default function UserProfile() {
     <h1>{username}'s profile</h1>
 </div>
       <MDBContainer className="py-5 h-100">
-        <MDBRow className="justify-content-center align-items-center h-10" style={{position: 'absolute', left:'10%', top: '26%',}}>
+        <MDBRow className="justify-content-center align-items-center h-10" style={{position: 'absolute', left:'25%', top: '26%',}}>
           <MDBCol lg="6" className="mb-4 mb-lg-0">
             <MDBCard className="mb-3" style={{ borderRadius: '.5rem' }}>
               <MDBRow className="g-0">
@@ -107,15 +110,21 @@ export default function UserProfile() {
 
       <MDBContainer className="py-5 h-100">
         <MDBRow className="justify-content-right align-items-center h-10">
+        <>
+        
           <MDBCol lg="1" xl="7">
-
-        <ListWithPosterFetch urlToFetch={"http://localhost:5001/api/user/bookmarks/"+userName} title={"Bookmarks for "+userName}
+              
+            <ListWithPosterFetch urlToFetch={"http://localhost:5001/api/user/bookmarks/"+userName} title={"Bookmarks for "+userName}
                                               width={395} heigth={420}></ListWithPosterFetch>
+            </MDBCol>
 
-        <ListWithPosterFetch urlToFetch={"http://localhost:5001/api/user/"+userName+"/ratings"} title={"Ratings for "+userName}
+            <MDBCol lg="1" xl="7">
+           <ListWithPosterFetch urlToFetch={"http://localhost:5001/api/user/"+userName+"/ratings"} title={"Ratings for "+userName}
                                               width={395} heigth={420}></ListWithPosterFetch>
           </MDBCol>
+          </>
         </MDBRow>
+      
       </MDBContainer>
     </section>
 

@@ -10,10 +10,14 @@ import InfoIcon from '@mui/icons-material/Info';
 import { Nav } from "react-bootstrap";
 import { ListItemSecondaryAction } from "@mui/material";
 import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBTypography, MDBIcon } from 'mdb-react-ui-kit';
+import Route, { Navigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 
 
 export default function ListOfPostersFetch({urlToFetch, title, width, height}){
+  const navigate = useNavigate();
+
 
 function handleClick(id){
 }
@@ -27,9 +31,9 @@ if (loading!=="false") {
   }
 else{
 return (
-  <MDBCard className="mb-3" style={{ borderRadius: '.5rem' }}>
+  <MDBCard className="mb-3" style={{ borderRadius: '.5rem' }} >
   <ImageList sx={{ width: width, height: height }}>
-  <ImageListItem key="Subheader" cols={2}>
+  <ImageListItem key="Subheader" cols={2} >
     <ListSubheader component="div">{title}</ListSubheader>
   </ImageListItem>
   {result.map((item) => (
@@ -48,6 +52,7 @@ return (
           <IconButton 
             sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
             aria-label={`info about ${item.title}`}
+            onClick={()=>navigate("/movies/"+item.titleId)}
           >
             <InfoIcon />
           </IconButton>
