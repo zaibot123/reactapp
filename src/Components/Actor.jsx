@@ -6,8 +6,9 @@ import { useNavigate } from "react-router-dom";
 
 
 const Actor = ({all}) =>{
-  let actorURL = "/actor/"+all.id
+  let actorURL = "/actor/search/"+all.id
   const navigate = useNavigate();
+
   const age =  () =>{
     if (all.birthYear!=="    " && all.deathYear!=="    ")
     {
@@ -25,7 +26,7 @@ const Actor = ({all}) =>{
 return (
       
 <div className="card">
-<Nav.Link  onClick={navigate(actorURL)}>
+<Nav.Link  onClick={()=>navigate(actorURL)}>
     <div className="title">
     {all.name} 
     </div>
