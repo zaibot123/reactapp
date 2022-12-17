@@ -24,10 +24,16 @@ const DeleteBookmark = async (MovieID, getUser) => {
   {method: "DELETE"});}
 
 const PostRating = async (MovieID,Rating, getUser) => {
-const rating=10;
+
 const response = 
 await fetch("http://localhost:5001/api/user/rate?title_id="+String(MovieID)+"&username="+getUser+"&rating="+String(Rating), 
 {method: "POST"});
+}
+
+const DeleteRating = async(MovieID,rating, getUser) => {
+ 
+  const response = 
+  await fetch("http://localhost:5001/api/user/rate?title_id="+String(MovieID)+"&username="+getUser,{method: "DELETE"});
 }
 
   
@@ -79,6 +85,7 @@ return(
           
                        />
                       <Button onClick = {()=>PostRating(MovieID,rating, getUser)}>Rate!</Button>
+                      <Button onClick = {()=>DeleteRating(MovieID,rating, getUser)}>Delete Rate!</Button>
                      </Form>
 
            <Button onClick = {()=>PutBookmark(MovieID, getUser)}>Bookmark</Button>
@@ -95,10 +102,6 @@ return(
       </Col>
 
       </CardGroup>
-     
-
-  
-      
       </Row>
     </div>
     </>
