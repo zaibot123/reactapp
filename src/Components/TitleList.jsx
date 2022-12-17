@@ -18,7 +18,6 @@ return (
     <Col>   {last5Movies.map(x => <Title all={x} key={x.url}/>)}</Col>
     </Row>
 
- {/* {listOfResults.map(x => <Title all={x} key={x.url}/>)}  */}
 </>
 )
 }

@@ -37,7 +37,6 @@ margin-inline-start: 30px;
 
 .list-title{
   font-size: 40px;
-  /* background: linear-gradient(90deg, rgb(121, 124, 128) 0%, rgb(195, 195, 195) 0%, rgb(167, 190, 195) 100%); */
   background-color: whitesmoke;
   inline-size: flex;
   block-size: flex;

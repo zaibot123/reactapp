@@ -20,7 +20,6 @@ return (
     <Col>   {last50Movies.map(x => <Actor all={x} key={x.id}/>)}</Col>
     </Row>
 
- {/* {listOfResults.map(x => <Title all={x} key={x.url}/>)}  */}
 </>
 )
 }

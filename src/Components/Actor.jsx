@@ -33,9 +33,6 @@ return (
   <img className="card-img-top" src={"https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"}/>
     <p className="card-text"> {"age: "+age(all)}</p>
     <p className="card-text"> {"characters: "+all.characters}</p>
-{/* <button className="button-62" href = {movieUrl}>
-Se Mere
- </button> */}
   </div>
   </Nav.Link>
 </div>
