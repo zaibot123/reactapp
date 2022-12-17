@@ -14,47 +14,53 @@ import { Card } from "react-bootstrap";
 const ActorSingleView = () =>{
 
     let testList=['1','2','3']
-    
+
     const { id } = useParams()
     let [data, setData] = useState(null);
     let[coactors, setCoactors] = useState(null);
+    let[actorName, setActorName] = useState(null);
 
     useEffect(() => {
-
-          const DataUrl="http://localhost:5001/api/actors/nm0001056";
+          
+          const DataUrl="http://localhost:5001/api/actors/"+id;
           const fetchData = async () => {
           const response = await fetch(DataUrl);
           const Data = await response.json();
           setData(Data)
+          console.log("hej")
+        
 
         };
 
         const fetchCoactors = async () => {
-            const CoactorsUrl="http://localhost:5001/api/actors/coactors/Ryan Gosling";
+   
+            const CoactorsUrl="http://localhost:5001/api/actors/coactors/"+data.name;
             const response = await fetch(CoactorsUrl);
             const CoactorData = await response.json();
             setCoactors(CoactorData)
-            console.log(CoactorData)
-  
           };
 
-        fetchData();
-        fetchCoactors();
+          fetchData();
+          fetchCoactors();
+     
+        
       },[]);
 
 
 
 //onClick={()=>navigate(movieUrl)}
 return (
-   <> 
-    
-{/* <Actor all={data}/> */}
+   <>
+    {/* {console.log(data)} */}
+    <Actor all={data}/>
 <div className="list-title">
       <h1>Coactors</h1>
     </div>
-<Nav.Link >{testList.map(x => <Card><Card.Body key={x}>{x}</Card.Body></Card>)}</Nav.Link>
- 
-</> 
+
+   
+  {/* <Nav.Link >{coactors.map(x => <Card><Card.Body key={x.id}>{x.name}</Card.Body></Card>)}</Nav.Link> */}
+
+</>
     )
 }
 export default ActorSingleView;

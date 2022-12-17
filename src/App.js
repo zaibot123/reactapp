@@ -45,7 +45,7 @@ function App() {
       <Route path="/movie"   element={<BigMovie/>} />
       <Route path="/register"   element={<RegisterUser/>} />
       <Route path="/user/edit/:userName"   element={<EditUser/>} />
-      <Route path="/actor/:actorID"   element={<ActorSingleView/>} />
+      <Route path="/actor/:id"   element={<ActorSingleView/>} />
    
       </Routes>
       </UsernameContext.Provider>
