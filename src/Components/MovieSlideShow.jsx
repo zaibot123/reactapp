@@ -1,4 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel';
+import Title from './Title'
+import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useState, useEffect } from 'react';
 
@@ -31,9 +33,8 @@ function MovieSlideShow() {
   
   return (
   
-    <Card  class="card w-55"style={{left:'15%', width: '400px'}}>
-       
-  
+    <Card  className="card w-55"style={{left:'32%', width: '415px'}}>
+
     <Carousel>
       <Carousel.Item>
       <Card.Img key = "1" variant="top" src={poster1} />
