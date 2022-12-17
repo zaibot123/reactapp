@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 
 const Actor = ({all}) =>{
-  let actorURL = "/actor/search/"+all.id
+  let actorURL = "/actor/"+all.id
   const navigate = useNavigate();
   
   const age =  () =>{
