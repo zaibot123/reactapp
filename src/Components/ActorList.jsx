@@ -7,8 +7,8 @@ import Actor from "./Actor";
 
 const ActorList =  ({listOfResults}) =>{
 
-const first50Movies =  listOfResults.slice(0, 5);
-const last50Movies = listOfResults.slice(5, 10);
+const first50Actors =  listOfResults.slice(0, 5);
+const last50Actors = listOfResults.slice(5, 10);
 return (
  <>
 <div className="list-title">
@@ -16,8 +16,8 @@ return (
 </div>
 
     <Row >
-    <Col >   {first50Movies.map(x => <Actor all={x} key={x.id}/>)}</Col>
-    <Col>   {last50Movies.map(x => <Actor all={x} key={x.id}/>)}</Col>
+    <Col >   {first50Actors.map(x => <Actor all={x} key={x.id}/>)}</Col>
+    <Col>   {last50Actors.map(x => <Actor all={x} key={x.id}/>)}</Col>
     </Row>
 
 </>
