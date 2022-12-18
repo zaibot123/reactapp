@@ -19,5 +19,5 @@ export default function Wordcloud({DataUrl}) {
           fetchData();
       },[]);
 
-  return <ReactWordcloud words={words} />
+  return <ReactWordcloud words={data} size={[20,20]}/>
 }
