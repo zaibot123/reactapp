@@ -21,7 +21,7 @@ const Title = ({all}) =>{
     
   <div className="card-body">
   <img className="card-img-top" src={all.poster}/>
-    <p className="card-text"> {all.plot.slice(0,100)}</p>
+    <p className="card-text"> {all.titlePlot.slice(0,100)}</p>
 
   </div>
   </Nav.Link>

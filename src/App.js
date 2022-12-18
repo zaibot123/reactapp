@@ -20,6 +20,7 @@ import ActorSearch from './Components/ActorSearch';
 import EditUser from './Components/EditUser';
 import ActorSingleView from './Components/ActorSingleView';
 import Wordcloud from './Components/WordCloud';
+import BestSearch from './Components/BestSearch';
 
 
 
@@ -42,6 +43,7 @@ function App() {
       <Route path="/test/:userName"   element={<PosterCardList/>} />
       <Route path="/movies/search/:search"   element={<Search/>} />
       <Route path="/actors/search/:search"   element={<ActorSearch/>} />
+      <Route path="/best/search/:search"   element={<BestSearch/>} />
       <Route path="/movies/:titleId"   element={<BigMovie/>} />
       <Route path="/movie"   element={<BigMovie/>} />
       <Route path="/register"   element={<RegisterUser/>} />

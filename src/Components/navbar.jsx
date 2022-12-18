@@ -40,7 +40,12 @@ function NavBar(){
       console.log("Searching for " +userInput +"actor")
       navigate("actors/search/"+userInput)
     }
+
+  else if(searchtype=="Best"){
+    console.log("Searching for " +userInput +" best")
+    navigate("best/search/"+userInput)
   }
+}
 
    return (
          <>
@@ -91,6 +96,14 @@ function NavBar(){
             type={type}
             id={`inline-${type}-2`}
             onChange={() => setSearchtype("Actors")}
+          />
+          <Form.Check
+            inline
+            label="Best Match"
+            name="group1"
+            type={type}
+            id={`inline-${type}-2`}
+            onChange={() => setSearchtype("Best")}
           />
         
         </div>

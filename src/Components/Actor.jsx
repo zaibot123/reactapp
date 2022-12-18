@@ -77,9 +77,6 @@ return (
     <p className="card-text"> {"Characters: "+characters}</p>
     <p className="card-text"> {"Best known for: "+knownfor}</p>
     <p className="card-text"> {"Professions: "+professions}</p>
-  
-    
-
   </div>
 
 
