@@ -19,6 +19,7 @@ import RegisterUser from './Components/RegisterUser';
 import ActorSearch from './Components/ActorSearch';
 import EditUser from './Components/EditUser';
 import ActorSingleView from './Components/ActorSingleView';
+import Wordcloud from './Components/WordCloud';
 
 
 
@@ -46,6 +47,7 @@ function App() {
       <Route path="/register"   element={<RegisterUser/>} />
       <Route path="/user/edit/:userName"   element={<EditUser/>} />
       <Route path="/actor/:id"   element={<ActorSingleView/>} />
+      
    
       </Routes>
       </UsernameContext.Provider>

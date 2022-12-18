@@ -10,8 +10,6 @@ export default function ActorSearch(){
     const [status,setStatus]=useState("Loading")
     const [result,setResult]=useState(null)
 
-
-
     const fetchPage = async () => {
         setStatus("Loading");
         const response = await fetch("http://localhost:5001/api/actors/search/"+search)
@@ -22,6 +20,7 @@ export default function ActorSearch(){
     
       useEffect(() => {
         fetchPage();
+        
       }, []);
 
       
@@ -39,8 +38,7 @@ export default function ActorSearch(){
         <Spinner style={{ position: 'absolute', left: '50%', top: '50%', }}>
           <span className="visually-hidden">Loading...</span>
         </Spinner>
-      )
-
+    )
   }
 }
 
