@@ -1,7 +1,5 @@
 
 
-
-
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import {useContext, useState} from'react';
@@ -11,7 +9,6 @@ import Main from './Main';
 import * as React from "react";
 import Route, { Navigate } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
-
 
 function EditUser() {
   let [email, setEmail] = useState("");
