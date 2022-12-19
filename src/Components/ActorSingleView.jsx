@@ -11,6 +11,7 @@ import Wordcloud from "./WordCloud";
 
 
 
+
 const ActorSingleView = () =>{
 
    
@@ -20,7 +21,7 @@ const ActorSingleView = () =>{
     let[coactors, setCoactors] = useState(null);
     let[actorName, setActorName] = useState(null);
     let[status, setStatus]= useState("Loading");
-
+    const navigate = useNavigate();
 
     useEffect(() => {
           setStatus("Loading");
@@ -28,6 +29,10 @@ const ActorSingleView = () =>{
           const fetchData = async () => 
           {
           const response = await fetch(DataUrl);
+          if  (response.status==404)
+          {
+           navigate("/pagenotfound")
+          }
           const Data = await response.json();
           setData(Data)
 

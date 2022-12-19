@@ -9,6 +9,7 @@ import ListOfPostersFetch from "./ListWithPosterFetch";
 import { useContext } from 'react';
 import UsernameContext from "./UsernameContext";
 import { useParams } from "react-router";
+import { useNavigate } from "react-router";
 
 
 
@@ -43,6 +44,7 @@ function MovieBigPoster() {
   let [Poster, setPoster] = useState(null)
   let [rating, setRating] = useState("");
   let [Plot, setPlot] = useState(null)
+  const navigate = useNavigate();
 
   const { titleId } = useParams();
 
@@ -52,6 +54,10 @@ function MovieBigPoster() {
 
     const fetchData = async () => {
       const response = await fetch(url);
+      if  (response.status==404)
+          {
+           navigate("/pagenotfound")
+          }
       const Data = await response.json();
       console.log(Data)
       setTitle(Data[0]['titleName'])
