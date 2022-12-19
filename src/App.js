@@ -21,14 +21,14 @@ import EditUser from './Components/EditUser';
 import ActorSingleView from './Components/ActorSingleView';
 import Wordcloud from './Components/WordCloud';
 import BestSearch from './Components/BestSearch';
-
+import Footer from './Components/Footer';
 
 
 
 
 function App() {
 
-  const [user, setUser] = useState("Maria");
+  const [user, setUser] = useState("Guest");
 
   return (
     <div className="root">
@@ -49,10 +49,10 @@ function App() {
       <Route path="/register"   element={<RegisterUser/>} />
       <Route path="/user/edit/:userName"   element={<EditUser/>} />
       <Route path="/actor/:id"   element={<ActorSingleView/>} />
-      
-   
       </Routes>
+      <Footer/>
       </UsernameContext.Provider>
+    
     </div>
   );
   }

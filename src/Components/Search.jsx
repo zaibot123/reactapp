@@ -39,17 +39,22 @@ function Search() {
 
     return (
       <>
+     
         <TitleList listOfResults={alt['items']} />
-
-        <Button onClick={function () {
+       
+        <div class="row">
+  <div class="col-md-4"><Button onClick={function () {
           setCurrentPage(alt['prev']);
           fetchPage();
-        }}>Prev</Button>
-
-        <Button onClick={function () {
+        }}>Prev</Button></div>
+  <div class="col-md-4 ml-auto">  <Button onClick={function () {
           fetchPage();
           setCurrentPage(alt['next']);
-        }}>Next</Button>
+        }}>Next</Button></div>
+</div>
+        
+
+      
       </>
 
     )
