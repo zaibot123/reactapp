@@ -38,20 +38,17 @@ function App() {
       { /* ... and here is what happens when you click them */ }
       <Routes>
       <Route path="/"     element={<Main />} />
-      <Route path="/user/:userName"   element={<UserProfile/>} />
+      <Route path="/register"   element={<RegisterUser/>} />
       <Route path="/user/login"   element={<LogIn/>} />
-      <Route path="/user/bookmarks/:userName"   element={<TitleList/>} />
-      <Route path="/test/:userName"   element={<PosterCardList/>} />
+      <Route path="/user/:userName"   element={<UserProfile/>} />
+      <Route path="/user/edit/:userName"   element={<EditUser/>} />
       <Route path="/movies/search/:search"   element={<Search/>} />
       <Route path="/actors/search/:search"   element={<ActorSearch/>} />
       <Route path="/best/search/:search"   element={<BestSearch/>} />
       <Route path="/movies/:titleId"   element={<MovieBigPoster/>} />
-      <Route path="/movie"   element={<MovieBigPoster/>} />
-      <Route path="/register"   element={<RegisterUser/>} />
-      <Route path="/user/edit/:userName"   element={<EditUser/>} />
       <Route path="/actor/:id"   element={<ActorSingleView/>} />
       </Routes>
-      {/* <Footer/> */}
+      <Footer/>
       </UsernameContext.Provider>
     
     </div>
