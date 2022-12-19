@@ -7,6 +7,7 @@ import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCar
 import Row from 'react-bootstrap/Row';
 import { Button } from "react-bootstrap";
 import Col from 'react-bootstrap/Col';
+import Container from "react-bootstrap/Container";
 
 
 
@@ -14,8 +15,6 @@ import Col from 'react-bootstrap/Col';
 function Search() {
   let { getUser, setAUser } = useContext(UsernameContext);
   let [status, setStatus] = useState('Loading')
-  let [nextPage, setNextPage] = useState(null)
-  let [prevPage, setPrevPage] = useState(null)
   const { search } = useParams()
   let [currentPage, setCurrentPage] = useState("http://localhost:5001/api/movies?searchtype=simple&username=" + getUser + "&title=" + search + "&page=0&pageSize=10")
   let [alt, setAlt] = useState(null);
@@ -29,6 +28,7 @@ function Search() {
     const newData = await response.json();
     setStatus("Done");
     setAlt(newData);
+
   }
 
   useEffect(() => {
@@ -39,10 +39,23 @@ function Search() {
 
     return (
       <>
-     
+      
         <TitleList listOfResults={alt['items']} />
-       
-        <div class="row">
+        <Container>
+        <Row>
+        <Col md={4}><Button onClick={function(){ 
+         setCurrentPage(alt['prev']); fetchPage();
+        }}>Prev</Button></Col>
+        
+        <Col md={{ span: 4, offset: 4 }}><Button onClick={function(){ 
+         setCurrentPage(alt['next']); fetchPage(); 
+        }}>Next</Button></Col>
+      
+
+
+
+
+        {/* <div class="row">
   <div class="col-md-4"><Button onClick={function () {
           setCurrentPage(alt['prev']);
           fetchPage();
@@ -51,10 +64,10 @@ function Search() {
           fetchPage();
           setCurrentPage(alt['next']);
         }}>Next</Button></div>
-</div>
+</div> */}
         
-
-      
+</Row>
+</Container>
       </>
 
     )

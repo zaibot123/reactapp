@@ -1,7 +1,5 @@
 import React from "react";
-import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
-import Route, { Navigate } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 
 
@@ -20,7 +18,7 @@ const Title = ({all}) =>{
     </div>
     
   <div className="card-body">
-  <img className="card-img-top" src={all.poster}/>
+  <img className="card-img-top" src={all.poster} alt={all.titleName}/>
     <p className="card-text"> {all.titlePlot}</p>
 
   </div>

@@ -51,7 +51,7 @@ function App() {
       <Route path="/user/edit/:userName"   element={<EditUser/>} />
       <Route path="/actor/:id"   element={<ActorSingleView/>} />
       </Routes>
-      <Footer/>
+      {/* <Footer/> */}
       </UsernameContext.Provider>
     
     </div>

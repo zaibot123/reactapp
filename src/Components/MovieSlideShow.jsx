@@ -1,6 +1,4 @@
 import Carousel from 'react-bootstrap/Carousel';
-import Title from './Title'
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useState, useEffect } from 'react';
 
