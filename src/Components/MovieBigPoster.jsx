@@ -9,6 +9,7 @@ import ListOfPosters from "./ListWithPoster";
 import ListOfPostersFetch from "./ListWithPosterFetch";
 import {useContext} from'react';
 import UsernameContext from "./UsernameContext";
+import { useParams } from "react-router";
 
 
 
@@ -38,16 +39,19 @@ const DeleteRating = async(MovieID,rating, getUser) => {
 
   
 
-function MovieBigPoster({MovieID}){
+function MovieBigPoster(){
     let {getUser, setAUser} = useContext(UsernameContext);
     let [Title,setTitle] =useState(null)
     let [Status,setStatus]=useState("loading")
     let [Poster,setPoster]=useState(null)
     let [rating, setRating] = useState("");
     let [Plot,setPlot]=useState(null)
-    let[titleId, setTitleId]=useState(null);
+ 
+    const {titleId} = useParams();
+
     useEffect(() => {
-        const url="http://localhost:5001/api/movies/"+MovieID;
+    
+        const url="http://localhost:5001/api/movies/"+titleId;
     
         const fetchData = async () => {
           const response = await fetch(url);
@@ -73,7 +77,12 @@ return(
       <Col>
         <Card>
           <Card.Img style={{ width: '300px' }} variant="top" src={Poster} alt="alternatetext" />
-          <Card.Body>
+
+
+          {getUser == "Guest" ?
+                      <><i>Want to rate or bookmark? Register as a new user or log in</i></>
+                      : <>
+                                <Card.Body>
           <Form className="d-flex">
                    <Form.Control
                          type="Rating"
@@ -84,13 +93,22 @@ return(
                          onChange={e => setRating(e.target.value)}
           
                        />
-                      <Button onClick = {()=>PostRating(MovieID,rating, getUser)}>Rate!</Button>
-                      <Button onClick = {()=>DeleteRating(MovieID,rating, getUser)}>Delete Rate!</Button>
+                      <Button onClick = {()=>PostRating(titleId,rating, getUser)}>Rate!</Button>
+                      <Button onClick = {()=>DeleteRating(titleId,rating, getUser)}>Delete Rate!</Button>
                      </Form>
 
-           <Button onClick = {()=>PutBookmark(MovieID, getUser)}>Bookmark</Button>
-           <Button onClick = {()=>DeleteBookmark(MovieID, getUser)}>Remove Bookmark</Button>
+           <Button onClick = {()=>PutBookmark(titleId, getUser)}>Bookmark</Button>
+           <Button onClick = {()=>DeleteBookmark(titleId, getUser)}>Remove Bookmark</Button>
           </Card.Body>
+                      </>}
+
+
+
+
+
+
+
+
           <Card.Footer>
             <small className="text-muted">{Plot}</small>
           </Card.Footer>
@@ -98,7 +116,7 @@ return(
         </Col>
 
         <Col >
-      <ListOfPostersFetch urlToFetch={"http://localhost:5001/api/movies/"+MovieID+"/similar"} width={250} height={400}/>
+      <ListOfPostersFetch urlToFetch={"http://localhost:5001/api/movies/"+titleId+"/similar"} width={250} height={400}/>
       </Col>
 
       </CardGroup>

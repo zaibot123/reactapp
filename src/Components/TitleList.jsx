@@ -7,8 +7,8 @@ const TitleList =  ({listOfResults}) =>{
 
 console.log(listOfResults)
 
-    const first5Movies =  listOfResults.slice(0, 5);
-    const last5Movies = listOfResults.slice(5, 10);
+    const first5Movies =  listOfResults.slice(0, listOfResults.length/2);
+    const last5Movies = listOfResults.slice(listOfResults.length/2, listOfResults.length);
 
  
 

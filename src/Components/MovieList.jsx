@@ -1,15 +1,13 @@
 
 import MovieWithRating from "./MovieWithRating.jsx";
-import MovieNoRating from "./MovieNoRating.jsx";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import BigMovie from "./BigMovie.jsx";
+
 
 const MovieList =  ({PopularList,Title}) =>{
-    const first50Movies = PopularList.slice(0, 49);
-    const last50Movies = PopularList.slice(50, 100);
-if (Title)
-{
+    const first50Movies = PopularList.slice(0, PopularList.length/2);
+    const last50Movies = PopularList.slice(PopularList.length/2, PopularList.length);
+
     return (
      <>
     <div className="list-title">
@@ -17,19 +15,12 @@ if (Title)
     </div>
     <div className = "rowList">
     <Row >
-    <Col > {first50Movies.map(PopularMovie => <MovieWithRating PopularMovie={PopularMovie} key={PopularMovie.url} handleClick={BigMovie} />)}</Col>
-    <Col>  {last50Movies.map(PopularMovie => <MovieWithRating PopularMovie={PopularMovie} key={PopularMovie.url} handleClick={BigMovie} />)}</Col>
+    <Col > {first50Movies.map(PopularMovie => <MovieWithRating PopularMovie={PopularMovie} key={PopularMovie.url}/>)}</Col>
+    <Col>  {last50Movies.map(PopularMovie => <MovieWithRating PopularMovie={PopularMovie} key={PopularMovie.url}/>)}</Col>
 
     </Row>
     </div>
     </>
     )
-}
-else {
-return(
-    <>
-    {PopularList.map(PopularMovie => <MovieNoRating PopularMovie={PopularMovie} key={PopularMovie.url} handleClick={BigMovie} />)}
-    </>
-)}
 }
     export default MovieList;

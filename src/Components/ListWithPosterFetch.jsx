@@ -17,11 +17,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function ListOfPostersFetch({urlToFetch, title, width, height}){
   const navigate = useNavigate();
-
-
-function handleClick(id){
-}
-const {result,loading,error} = useFetch(urlToFetch);
+  const {result,loading,error} = useFetch(urlToFetch);
 if (loading!=="false") {
   return(
    <Spinner style={{position: 'absolute', left:'50%', top: '50%',}}>

@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from "react";
 import MovieList from "./MovieList";
-import BigMovie from './BigMovie';
 import MovieSlideShow from "./MovieSlideShow";
 import Row from 'react-bootstrap/Row';
 import useFetch from "./useFetch";
 import Col from 'react-bootstrap/Col';
 import ListOfPosters from "./ListWithPosterFetch";
+import MovieBigPoster from "./MovieBigPoster";
 
 
 
@@ -27,7 +27,7 @@ function Main () {
    
         <MovieSlideShow moviesForSlide={popularMovies.slice(0,4)} />
  
-      <MovieList PopularList={popularMovies} handleClick={BigMovie} Title="Top 100 Movies" /></>)
+      <MovieList PopularList={popularMovies} handleClick={MovieBigPoster} Title="Top 100 Movies" /></>)
     } else {
       return null;
     }

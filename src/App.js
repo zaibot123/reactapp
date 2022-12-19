@@ -10,7 +10,7 @@ import UserProfile from './Components/UserProfile';
 import PosterCardList from'./Components/PosterCardList';
 import LogIn from './Components/LogIn';
 import Main from './Components/Main';
-import BigMovie from './Components/BigMovie';
+
 import Search from './Components/Search';
 import ListWithPoster from './Components/ListWithPosterFetch';
 import UsernameContext from './Components/UsernameContext';
@@ -22,6 +22,7 @@ import ActorSingleView from './Components/ActorSingleView';
 import Wordcloud from './Components/WordCloud';
 import BestSearch from './Components/BestSearch';
 import Footer from './Components/Footer';
+import MovieBigPoster from './Components/MovieBigPoster';
 
 
 
@@ -44,8 +45,8 @@ function App() {
       <Route path="/movies/search/:search"   element={<Search/>} />
       <Route path="/actors/search/:search"   element={<ActorSearch/>} />
       <Route path="/best/search/:search"   element={<BestSearch/>} />
-      <Route path="/movies/:titleId"   element={<BigMovie/>} />
-      <Route path="/movie"   element={<BigMovie/>} />
+      <Route path="/movies/:titleId"   element={<MovieBigPoster/>} />
+      <Route path="/movie"   element={<MovieBigPoster/>} />
       <Route path="/register"   element={<RegisterUser/>} />
       <Route path="/user/edit/:userName"   element={<EditUser/>} />
       <Route path="/actor/:id"   element={<ActorSingleView/>} />
