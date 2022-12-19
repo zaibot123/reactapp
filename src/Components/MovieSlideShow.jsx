@@ -32,25 +32,24 @@ function MovieSlideShow() {
     
   
   return (
-  
-    <Card  className="card w-55"style={{left:'32%', width: '415px'}}>
+    
+    <Card  className="card w-55"style={{left:'32%'}}>
 
     <Carousel>
       <Carousel.Item>
-      <Card.Img key = "1" variant="top" src={poster1} />
+      <Card.Img key = "1" variant="top" src={poster1} style={{width:415, height:250}} />
       <Card.Body>
         <Card.Title>{title1}</Card.Title>
       </Card.Body>
       </Carousel.Item>
       <Carousel.Item>
-      <Card.Img key = "2" variant="top" src={poster2} />
+      <Card.Img key = "2" variant="top" src={poster2} style={{width:415, height:250}} />
       <Card.Body>
         <Card.Title>{title2}</Card.Title>
       </Card.Body>
       </Carousel.Item>
       <Carousel.Item>
-      <Card.Img key = "3" variant="top" src={poster3} />
-
+      <Card.Img key = "3" variant="top" src={poster3} style={{width:415, height:250}} />
       <Card.Body>
         <Card.Title>{title3}</Card.Title>
       </Card.Body>

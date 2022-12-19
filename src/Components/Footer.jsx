@@ -13,7 +13,7 @@ export default function Footer(){
   
       <> 
   
-  <div class="container"> 
+  <div className="container"> 
   
       <footer> 
   
