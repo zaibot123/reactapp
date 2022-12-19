@@ -17,15 +17,18 @@ function Main () {
     let [popularMovies, setPopularMovies]=useState(null);
     let[status, setStatus]=useState("Loading")
     useEffect(() => {
+      
       const fetchData = async () => {
+        setStatus("Loading")
         const response = await fetch('http://localhost:5001/api/movies/popular');
         const newData = await response.json();
         setPopularMovies(newData);  
+        setStatus("Done")
       };
 
-      setStatus("Loading")
+    
       fetchData();
-      setStatus("Done")
+      
     },[]);
     
    if(status=="Done"){
@@ -37,7 +40,6 @@ function Main () {
         {getUser === "Guest" ? <h1>For full features: Log in </h1>:<h1>Welcome back {getUser}</h1>}
          
       </div>
-
 
         <MovieSlideShow moviesForSlide={popularMovies.slice(0,4)} />
  
