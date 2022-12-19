@@ -32,7 +32,7 @@ const Actor = ({all}) =>{
 
   const fetchCharacters = async () => {
     
-    const response = await fetch("http://cit.ruc.dk/cit03/api/actors/characters/"+all.id)
+    const response = await fetch("http://localhost:5001/api/actors/characters/"+all.id)
     const charactersData = await response.json();
    
     setCharacters(charactersData);
@@ -40,7 +40,7 @@ const Actor = ({all}) =>{
 
   const fetchKnownFor = async () => {
    
-    const response = await fetch("http://cit.ruc.dk/cit03/api/actors/knownfor/"+all.id)
+    const response = await fetch("http://localhost:5001/api/actors/knownfor/"+all.id)
     const knownforData = await response.json();
     
     setKnownfor(knownforData);
@@ -48,7 +48,7 @@ const Actor = ({all}) =>{
 
   const fetchProfessions = async () => {
    
-    const response = await fetch("http://cit.ruc.dk/cit03/api/actors/profession/"+all.id)
+    const response = await fetch("http://localhost:5001/api/actors/profession/"+all.id)
     const professionsData = await response.json();
     
     setProfessions(professionsData);

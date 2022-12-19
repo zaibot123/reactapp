@@ -16,23 +16,23 @@ import { useNavigate } from "react-router";
 const PutBookmark = async (MovieID, getUser) => {
   console.log(MovieID)
 
-  await fetch("http://cit.ruc.dk/cit03/api/movies/bookmark?username=" + getUser + "&title_id=" + String(MovieID),
+  await fetch("http://localhost:5001/api/movies/bookmark?username=" + getUser + "&title_id=" + String(MovieID),
     { method: "PUT" });
 }
 
 const DeleteBookmark = async (MovieID, getUser) => {
 
-  await fetch("http://cit.ruc.dk/cit03/api/movies/bookmark?username=" + getUser + "&title_id=" + String(MovieID),
+  await fetch("http://localhost:5001/api/movies/bookmark?username=" + getUser + "&title_id=" + String(MovieID),
     { method: "DELETE" });
 }
 
 const PostRating = async (MovieID, Rating, getUser) => {
-  await fetch("http://cit.ruc.dk/cit03/api/user/rate?title_id=" + String(MovieID) + "&username=" + getUser + "&rating=" + String(Rating),
+  await fetch("http://localhost:5001/api/user/rate?title_id=" + String(MovieID) + "&username=" + getUser + "&rating=" + String(Rating),
     { method: "POST" });
 }
 
 const DeleteRating = async (MovieID, rating, getUser) => {
-  await fetch("http://cit.ruc.dk/cit03/api/user/rate?title_id=" + String(MovieID) + "&username=" + getUser, { method: "DELETE" });
+  await fetch("http://localhost:5001/api/user/rate?title_id=" + String(MovieID) + "&username=" + getUser, { method: "DELETE" });
 }
 
 
@@ -50,7 +50,7 @@ function MovieBigPoster() {
 
   useEffect(() => {
 
-    const url = "http://cit.ruc.dk/cit03/api/movies/" + titleId;
+    const url = "http://localhost:5001/api/movies/" + titleId;
 
     const fetchData = async () => {
       const response = await fetch(url);
@@ -111,7 +111,7 @@ function MovieBigPoster() {
             </Col>
 
             <Col >
-              <ListOfPostersFetch urlToFetch={"http://cit.ruc.dk/cit03/api/movies/" + titleId + "/similar"} width={250} height={400} />
+              <ListOfPostersFetch urlToFetch={"http://localhost:5001/api/movies/" + titleId + "/similar"} width={250} height={400} />
             </Col>
 
           </CardGroup>

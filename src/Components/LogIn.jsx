@@ -21,7 +21,7 @@ function LogIn() {
 
     const LoginFunction = async () => {
     const response = 
-    await fetch("http://cit.ruc.dk/cit03/api/user/login", { 
+    await fetch("http://localhost:5001/api/user/login", { 
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -56,7 +56,7 @@ function LogIn() {
       <Form.Group className="mb-3" controlId="formGroupPassword">
         <Form.Label>Password</Form.Label>
         <Form.Control
-                         type="search"
+                         type="Password"
                          placeholder="Password"
                          className="me-2"
                          aria-label="Search" 

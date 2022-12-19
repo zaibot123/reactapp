@@ -9,7 +9,7 @@ import Spinner from 'react-bootstrap/Spinner';
 
 
 export default function ListOfPosters({listOfURL}){
-const {result,loading,error} = useFetch("http://cit.ruc.dk/cit03/api/movies/tt5040224/similar");
+const {result,loading,error} = useFetch("http://localhost:5001/api/movies/tt5040224/similar");
 if (loading!=="false") {
   return(
    <Spinner style={{position: 'absolute', left:'50%', top: '50%',}}>

@@ -15,7 +15,7 @@ function Search() {
   let { getUser, setAUser } = useContext(UsernameContext);
   let [status, setStatus] = useState('Loading')
   const { search } = useParams()
-  let [currentPage, setCurrentPage] = useState("http://cit.ruc.dk/cit03/api/movies?searchtype=simple&username=" + getUser + "&title=" + search + "&page=0&pageSize=10")
+  let [currentPage, setCurrentPage] = useState("http://localhost:5001/api/movies?searchtype=simple&username=" + getUser + "&title=" + search + "&page=0&pageSize=10")
   let [alt, setAlt] = useState(null);
 
 

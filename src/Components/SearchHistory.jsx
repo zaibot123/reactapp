@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function SearchHistory({ name }) {
     const navigate = useNavigate();
-    const {result} = useFetch("http://cit.ruc.dk/cit03/api/user/history/" + name);
+    const {result} = useFetch("http://localhost:5001/api/user/history/" + name);
     console.log(result)
     if (result) {
 
