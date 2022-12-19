@@ -23,6 +23,7 @@ import Wordcloud from './Components/WordCloud';
 import BestSearch from './Components/BestSearch';
 import Footer from './Components/Footer';
 import MovieBigPoster from './Components/MovieBigPoster';
+import PageNotFound from './Components/PageNotFound';
 
 
 

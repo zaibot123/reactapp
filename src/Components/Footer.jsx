@@ -21,7 +21,7 @@ export default function Footer(){
   
         <div className="col-md-6 offset-md-6"> 
   
-          <a href="https://github.com/zaibot123/reactapp" class="btn btn-light" style={{marginTop:5}}  >GitHub</a> 
+          <a href="https://github.com/zaibot123/reactapp/tree/Portfolio3" class="btn btn-light" style={{marginTop:5}}  >GitHub</a> 
   
           </div> 
   
