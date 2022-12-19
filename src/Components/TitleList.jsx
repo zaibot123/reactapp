@@ -18,11 +18,11 @@ return (
     <h1>Movies</h1>
 </div>
 
-<div class="row justify-content-around">
-    <div class="col-4">
+<div className="row justify-content-around">
+    <div className="col-4">
     {first5Movies.map(x => <Title all={x} key={x.titleId}/>)}
     </div>
-    <div class="col-4">
+    <div className="col-4">
     {last5Movies.map(x => <Title all={x} key={x.titleId}/>)}
     </div>
   </div>

@@ -17,6 +17,7 @@ function Search() {
   const { search } = useParams()
   let [currentPage, setCurrentPage] = useState("http://localhost:5001/api/movies?searchtype=simple&username=" + getUser + "&title=" + search + "&page=0&pageSize=10")
   let [alt, setAlt] = useState(null);
+  
 
 
 
@@ -48,18 +49,6 @@ function Search() {
         <Col md={1}><Button onClick={function(){ 
          setCurrentPage(alt['next']); fetchPage(); 
         }}>Next</Button></Col>
-      
-
-        {/* <div class="row">
-  <div class="col-md-4"><Button onClick={function () {
-          setCurrentPage(alt['prev']);
-          fetchPage();
-        }}>Prev</Button></div>
-  <div class="col-md-4 ml-auto">  <Button onClick={function () {
-          fetchPage();
-          setCurrentPage(alt['next']);
-        }}>Next</Button></div>
-</div> */}
         
 </Row>
 </Container>
