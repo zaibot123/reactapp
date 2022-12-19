@@ -11,6 +11,8 @@ margin-inline-start: 30px;
   inline-size: 400px;
   block-size:200px;
 }
+
+
 .footer {
   position: fixed;
   height: 50px;
