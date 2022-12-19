@@ -1,4 +1,4 @@
-import { FormLabel, InputGroup } from 'react-bootstrap';
+
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -6,21 +6,10 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import { setMessage, useRef, useState, useContext } from "react";
-import { onClick, onSubmit } from "react";
-import userEvent from '@testing-library/user-event';
+import { useState, useContext } from "react";
 import UsernameContext from './UsernameContext';
-import { redirect } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import React from 'react';
-import { MDBCheckbox } from 'mdb-react-ui-kit';
-
-
-
-
-
-
-
 
 
 function NavBar() {
@@ -31,20 +20,25 @@ function NavBar() {
 
   function search() {
 
-    if (searchtype == "Movies") {
-      console.log("Searching for " + userInput + "Movie")
+    if (searchtype === "Movies") {
+    
       navigate("/movies/search/" + userInput)
     }
 
-    else if (searchtype == "Actors") {
-      console.log("Searching for " + userInput + "actor")
+    else if (searchtype === "Actors") {
+      
       navigate("actors/search/" + userInput)
     }
 
-    else if (searchtype == "Best") {
-      console.log("Searching for " + userInput + " best")
+    else if (searchtype === "Best") {
+     
       navigate("best/search/" + userInput)
     }
+  }
+
+  function logOutFunction() {
+    setAUser("Guest");
+    navigate("/");
   }
 
   return (
@@ -77,9 +71,9 @@ function NavBar() {
                   <Button onClick={() => search()} variant="outline-success" >Search </Button>
                 </Form>
 
-                <Form>
+                <Form >
                   {['radio'].map((type) => (
-                    <div key={`inline-${type}`} className="mb-3">
+                    <div key={`inline-${type}`} className="mb-3" >
                       <Form.Check
                         inline
                         label="Movies"
@@ -117,7 +111,7 @@ function NavBar() {
                     title="Menu"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    {getUser == "Guest" ?
+                    {getUser === "Guest" ?
                       <>
                         <NavDropdown.Item onClick={() => navigate("/register")}>Register new user</NavDropdown.Item>
                         <NavDropdown.Divider /><NavDropdown.Item onClick={() => navigate("/user/login")}>
@@ -130,7 +124,7 @@ function NavBar() {
                         </NavDropdown.Item>
                         <NavDropdown.Divider />
 
-                        <NavDropdown.Item onClick={() => setAUser("Guest")}>
+                        <NavDropdown.Item onClick={() => logOutFunction()}>
                           Log out
                         </NavDropdown.Item>
                       </>}

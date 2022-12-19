@@ -4,7 +4,7 @@ import ReactWordcloud from 'react-wordcloud';
  
 export default function Wordcloud({DataUrl}) {
     let[data, setData]= useState(null);
-    
+
     useEffect(() => {
           
           const fetchData = async () => 
