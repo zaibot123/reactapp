@@ -15,6 +15,8 @@ if (Title)
     <div className="list-title">
       <h1>{Title}</h1>
     </div>
+
+   
     <div className = "rowList">
     <Row >
     <Col > {first50Movies.map(PopularMovie => <MovieWithRating PopularMovie={PopularMovie} key={PopularMovie.url} handleClick={BigMovie} />)}</Col>
@@ -22,6 +24,7 @@ if (Title)
 
     </Row>
     </div>
+   
     </>
     )
 }

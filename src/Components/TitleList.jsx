@@ -19,12 +19,23 @@ return (
     <h1>Movies</h1>
 </div>
 
-    <Row >
+    {/* <Row >
     <Col >   {first5Movies.map(x => <Title all={x} key={x.titleId}/>)}</Col>
     <Col>   {last5Movies.map(x => <Title all={x} key={x.titleId}/>)}</Col>
-    </Row>
+    </Row> */}
+
+
+<div class="row justify-content-around">
+    <div class="col-4">
+    {first5Movies.map(x => <Title all={x} key={x.titleId}/>)}
+    </div>
+    <div class="col-4">
+    {last5Movies.map(x => <Title all={x} key={x.titleId}/>)}
+    </div>
+  </div>
 
 </>
+
 )
 }
 export default TitleList;
