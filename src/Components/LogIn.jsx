@@ -21,7 +21,7 @@ function LogIn() {
 
     const LoginFunction = async () => {
     const response = 
-    await fetch("http://localhost:5001/api/user/login", { 
+    await fetch("http://cit.ruc.dk/cit03/api/user/login", { 
       method: "POST",
       headers: {
         "Content-Type": "application/json"

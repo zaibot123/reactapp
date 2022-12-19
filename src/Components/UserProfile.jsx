@@ -27,7 +27,7 @@ export default function UserProfile() {
   useEffect(() => {
     const fetchData = async () => {
 
-      const userResponse = await fetch("http://localhost:5001/api/user/" + userName);
+      const userResponse = await fetch("http://cit.ruc.dk/cit03/api/user/" + userName);
       const userData = await userResponse.json();
       setUsername(userData['userName'])
       setBio(userData['bio'])
@@ -94,13 +94,13 @@ export default function UserProfile() {
 
               <MDBCol lg="1" xl="7">
 
-                <ListWithPosterFetch urlToFetch={"http://localhost:5001/api/user/bookmarks/" + userName} title={"Bookmarks for " + userName}
+                <ListWithPosterFetch urlToFetch={"http://cit.ruc.dk/cit03/api/user/bookmarks/" + userName} title={"Bookmarks for " + userName}
                   width={395} heigth={420}></ListWithPosterFetch>
               </MDBCol>
 
 
               <MDBCol lg="1" xl="7">
-                <ListWithPosterFetch urlToFetch={"http://localhost:5001/api/user/" + userName + "/ratings"} title={"Ratings for " + userName}
+                <ListWithPosterFetch urlToFetch={"http://cit.ruc.dk/cit03/api/user/" + userName + "/ratings"} title={"Ratings for " + userName}
                   width={395} heigth={420}></ListWithPosterFetch>
               </MDBCol>
               <div style={{ position: 'absolute', left: '70%', top: '30%', }} >

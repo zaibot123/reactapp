@@ -20,7 +20,7 @@ function Main () {
       
       const fetchData = async () => {
         setStatus("Loading")
-        const response = await fetch('http://localhost:5001/api/movies/popular');
+        const response = await fetch('http://cit.ruc.dk/cit03/api/movies/popular');
         const newData = await response.json();
         setPopularMovies(newData);  
         setStatus("Done")

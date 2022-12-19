@@ -19,7 +19,7 @@ function EditUser() {
 
   const editUserFunction = async () => {
     const response = 
-    await fetch("http://localhost:5001/api/user/edit", { 
+    await fetch("http://cit.ruc.dk/cit03/api/user/edit", { 
       method: "PATCH",
       headers: {
         "Content-Type": "application/json"

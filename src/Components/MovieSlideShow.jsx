@@ -15,7 +15,7 @@ function MovieSlideShow() {
   useEffect(() => {
     const fetchData = async () => { 
 
-      const Response = await fetch("http://localhost:5001/api/movies/popular");
+      const Response = await fetch("http://cit.ruc.dk/cit03/api/movies/popular");
       const Data = await Response.json();
       setTitle1(Data[0]['titleName'])
       setPoster1(Data[0]['poster']) 

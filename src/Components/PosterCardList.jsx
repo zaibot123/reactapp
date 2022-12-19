@@ -13,7 +13,7 @@ const PosterCardList =  () =>{
 
         
         const fetchData = async () => { 
-          const response1 = await fetch("http://localhost:5001/api/user/bookmarks/"+userName);
+          const response1 = await fetch("http://cit.ruc.dk/cit03/api/user/bookmarks/"+userName);
           const newData1 = await response1.json();
 
             newData1.forEach(element => {

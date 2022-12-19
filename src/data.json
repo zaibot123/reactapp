@@ -1,67 +1,67 @@
 {
-    "first": "http://localhost:5001/api/movies?searchtype=simple&title=warrior&page=0&pageSize=10",
-    "prev": "http://localhost:5001/api/movies?searchtype=simple&title=warrior&page=1&pageSize=10",
-    "next": "http://localhost:5001/api/movies?searchtype=simple&title=warrior&page=3&pageSize=10",
-    "current": "http://localhost:5001/api/movies?searchtype=simple&title=warrior&page=2&pageSize=10",
+    "first": "http://cit.ruc.dk/cit03/api/movies?searchtype=simple&title=warrior&page=0&pageSize=10",
+    "prev": "http://cit.ruc.dk/cit03/api/movies?searchtype=simple&title=warrior&page=1&pageSize=10",
+    "next": "http://cit.ruc.dk/cit03/api/movies?searchtype=simple&title=warrior&page=3&pageSize=10",
+    "current": "http://cit.ruc.dk/cit03/api/movies?searchtype=simple&title=warrior&page=2&pageSize=10",
     "total": 235,
     "pages": 24,
     "items": [
         {
-            "url": "http://localhost:5001/api/movies/tt5246020",
+            "url": "http://cit.ruc.dk/cit03/api/movies/tt5246020",
             "titleName": "Belén",
             "poster": "https://m.media-amazon.com/images/M/MV5BODBhZGQ0OGYtNDc0ZC00NGM5LWJhNTgtZWY2ODU0NWRlNjdiXkEyXkFqcGdeQXVyNjQwOTM5ODc@._V1_SX300.jpg",
             "plot": "Hands of earth, crystal eyes, ancestral bridge through time, gender and race. Immortal humble wise noble warrior. Queen of bamboo's sounds and silence. Felt around and not just as an echo. Resisting beating African Diaspora. Inspiration to continue each battle. Resonating spirit: Belen."
         },
         {
-            "url": "http://localhost:5001/api/movies/tt7329290",
+            "url": "http://cit.ruc.dk/cit03/api/movies/tt7329290",
             "titleName": "Bhamashah",
             "poster": "https://m.media-amazon.com/images/M/MV5BODQwOGI2YWEtNDI0Ny00NTVkLTllYjgtZTMxOGI4MmNhYzA4XkEyXkFqcGdeQXVyODE0OTE2Njk@._V1_SX300.jpg",
             "plot": "A retelling of the story of Bhamashah, a truly remarkable character in Indian history- a philanthropist, warrior, advisor to Maharana Pratap and most importantly, a Jain Shravak. On the forefront of massive wars against the Moguls, Bhamashah looted their treasure and donated all his wealth to Mewar."
         },
         {
-            "url": "http://localhost:5001/api/movies/tt3576728",
+            "url": "http://cit.ruc.dk/cit03/api/movies/tt3576728",
             "titleName": "Bilal: A New Breed of Hero",
             "poster": "https://m.media-amazon.com/images/M/MV5BNmEyY2IxYTktMzIxMS00MzNmLTlmMjEtZGE1YzZkMDVjYzdiXkEyXkFqcGdeQXVyMTYxMzQzNTU@._V1_SX300.jpg",
             "plot": "A thousand years ago, one boy with a dream of becoming a great warrior is abducted with his sister and taken to a land far away from home. Thrown into a world where greed and injustice rule all, Bilal finds the courage to raise his voice and make a change. Inspired by true events, this is a story of a real hero who earned his remembrance in time and history."
         },
         {
-            "url": "http://localhost:5001/api/movies/tt5123416",
+            "url": "http://cit.ruc.dk/cit03/api/movies/tt5123416",
             "titleName": "Born Warriors Redux: Bound Fists",
             "poster": "N/A",
             "plot": "Born Warriors Redux: Bound Fists focuses on the role of cultural tradition in local communities and how the indigenous Burmese sport of Lethwei (bare-knuckle fighting) is woven into the fabric of rural life and practiced in modern arenas throughout Myanmar."
         },
         {
-            "url": "http://localhost:5001/api/movies/tt14138864",
+            "url": "http://cit.ruc.dk/cit03/api/movies/tt14138864",
             "titleName": "Brendar the Barbarian",
             "poster": "https://m.media-amazon.com/images/M/MV5BNWQ3ZmVhMDQtODM3Ny00YzdhLThkNGItZDkzYjVlZTgyM2E3XkEyXkFqcGdeQXVyODk1MjAxNzQ@._V1_SX300.jpg",
             "plot": "Brendar, a disowned warrior princess, begins a journey to defeat a demon linked to her complicated backstory, meeting an optimistic yet insecure troll prince named Evan."
         },
         {
-            "url": "http://localhost:5001/api/movies/tt10870106",
+            "url": "http://cit.ruc.dk/cit03/api/movies/tt10870106",
             "titleName": "Britannia VR: Out of your Mind",
             "poster": "https://m.media-amazon.com/images/M/MV5BYTcxYjEyMmYtZDBkYS00YzAwLTkwYWQtNmI3NGQ2MWUyNjRkXkEyXkFqcGdeQXVyMTA4Mjc0OTkz._V1_SX300.jpg",
             "plot": "An anarchic drama that follows the Roman army as they return to crush the Celtic heart of Britannia, a mysterious land led by warrior women and powerful Druids who claim to channel the powerful forces of the underworld."
         },
         {
-            "url": "http://localhost:5001/api/movies/tt6422070",
+            "url": "http://cit.ruc.dk/cit03/api/movies/tt6422070",
             "titleName": "Broly the Legendary Super Saiyan Abridged",
             "poster": "https://m.media-amazon.com/images/M/MV5BM2Q1OGM4N2ItZTU3Ny00Y2RiLTlhOWMtYzg0NmI0NGYyZmQwXkEyXkFqcGdeQXVyNjU1OTg4OTM@._V1_SX300.jpg",
             "plot": "In this comedic parody of the eighth \"Dragon Ball Z\" film, Prince Vegeta's reckless pride leads the Z Warriors into a battle against an incredibly deadly foe, who holds an incredibly fierce grudge against Goku... for an incredibly stupid reason."
         },
         {
-            "url": "http://localhost:5001/api/movies/tt4874006",
+            "url": "http://cit.ruc.dk/cit03/api/movies/tt4874006",
             "titleName": "Carry on Maratha",
             "poster": "https://m.media-amazon.com/images/M/MV5BNDAyMjgzN2MtOTY1MS00ZWFlLThkODctNzUxY2Y0ZjJhYmRmXkEyXkFqcGdeQXVyMzc0ODYyNzk@._V1_SX300.jpg",
             "plot": "Kolhapur's young Maratha, Martand comes across Kusum, a South Indian girl looking for a lift in the middle of the road. A chance encounter turns into a love story that brings both families face-to-face. Will the Maratha warrior be successful in love?"
         },
         {
-            "url": "http://localhost:5001/api/movies/tt11428366",
+            "url": "http://cit.ruc.dk/cit03/api/movies/tt11428366",
             "titleName": "China's Dragon Emperor",
             "poster": "https://m.media-amazon.com/images/M/MV5BZTU3OTg2NmYtNTRkNS00MzUwLTgxZWItZTM1YjMwMThiYjkzXkEyXkFqcGdeQXVyMTAxMDk2NDgx._V1_SX300.jpg",
             "plot": "The story of Qin Shi Huang is as epic in life as it is in death. Crowned as a boy king over 2,000 years ago, he grew to unify China for the first time, establishing a new form of government, uniform laws, and a single writing system that is still in use today. He also ordered the construction of a royal tomb that is larger than the Great Pyramid of Giza and is guarded by a massive army of terracotta warriors. Explore the transformative life and magnificent afterlife of China's first emperor."
         },
         {
-            "url": "http://localhost:5001/api/movies/tt7515592",
+            "url": "http://cit.ruc.dk/cit03/api/movies/tt7515592",
             "titleName": "Chiseled",
             "poster": "https://m.media-amazon.com/images/M/MV5BNzhmODlkMjctNDRkYy00ODFlLThlZmYtODY2YTg4ZTBhNGE0XkEyXkFqcGdeQXVyODA3NTk5Nzg@._V1_SX300.jpg",
             "plot": "\"Chiseled\" is an heritage documentary about magnificent temples, splendid forts and beautiful lakes ruled over by a warrior civilisation called \"Kakatiya Dynasty\"."

@@ -24,7 +24,7 @@ const ActorSingleView = () =>{
 
     useEffect(() => {
           setStatus("Loading");
-          const DataUrl="http://localhost:5001/api/actors/"+id;
+          const DataUrl="http://cit.ruc.dk/cit03/api/actors/"+id;
           const fetchData = async () => 
           {
           const response = await fetch(DataUrl);
@@ -34,7 +34,7 @@ const ActorSingleView = () =>{
           };
         
           const fetchCoactorData = async () => { 
-          const CoactorsUrl="http://localhost:5001/api/actors/coactors/"+id;
+          const CoactorsUrl="http://cit.ruc.dk/cit03/api/actors/coactors/"+id;
           const response = await fetch(CoactorsUrl);
           const CoactorData = await response.json();
           setCoactors(CoactorData)
@@ -59,7 +59,7 @@ return (
 <Row>
 
 <Col><Actor all={data}/></Col>
-<Col><Wordcloud DataUrl={"http://localhost:5001/api/actors/words/"+data.name} style={{ position: 'absolute', left: '50%', top: '20%', }}/></Col>
+<Col><Wordcloud DataUrl={"http://cit.ruc.dk/cit03/api/actors/words/"+data.name} style={{ position: 'absolute', left: '50%', top: '20%', }}/></Col>
 </Row>
     
     

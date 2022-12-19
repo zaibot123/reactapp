@@ -20,7 +20,7 @@ function BestSearch() {
 
 
   const fetchPage = async () => {
-    let url = "http://localhost:5001/api/movies?searchtype=best&username=" + getUser + "&title=" + search;
+    let url = "http://cit.ruc.dk/cit03/api/movies?searchtype=best&username=" + getUser + "&title=" + search;
     setStatus("Loading");
     console.log(url);
     const response = await fetch(url)
