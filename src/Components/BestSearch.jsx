@@ -3,10 +3,7 @@ import TitleList from "./TitleList";
 import UsernameContext from "./UsernameContext";
 import { useParams } from 'react-router-dom';
 import Spinner from 'react-bootstrap/Spinner';
-import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBTypography, MDBIcon } from 'mdb-react-ui-kit';
-import Row from 'react-bootstrap/Row';
-import { Button } from "react-bootstrap";
-import Col from 'react-bootstrap/Col';
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -16,7 +13,7 @@ function BestSearch() {
   let [status, setStatus] = useState('Loading')
   const { search } = useParams()
   let [alt, setAlt] = useState(null);
-
+  
 
 
   const fetchPage = async () => {
@@ -24,6 +21,7 @@ function BestSearch() {
     setStatus("Loading");
     console.log(url);
     const response = await fetch(url)
+
     const Data = await response.json();
     setStatus("Done");
     setAlt(Data);

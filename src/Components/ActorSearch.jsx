@@ -3,16 +3,19 @@ import { useParams } from "react-router-dom";
 import TitleList from "./TitleList";
 import Spinner from 'react-bootstrap/Spinner';
 import ActorList from "./ActorList";
+import { useNavigate } from "react-router-dom";
 
 export default function ActorSearch(){
 
     const { search } = useParams()
     const [status,setStatus]=useState("Loading")
     const [result,setResult]=useState(null)
+    
 
     const fetchPage = async () => {
         setStatus("Loading");
         const response = await fetch("http://cit.ruc.dk/cit03/api/actors/search/"+search)
+     
         const newData = await response.json();
         setStatus("Done");
         setResult(newData);

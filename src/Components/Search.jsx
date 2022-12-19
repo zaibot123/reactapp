@@ -27,7 +27,6 @@ function Search() {
     const newData = await response.json();
     setStatus("Done");
     setAlt(newData);
-
   }
 
   useEffect(() => {

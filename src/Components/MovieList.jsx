@@ -15,9 +15,10 @@ const MovieList =  ({PopularList,Title}) =>{
     </div>
     <div className = "rowList">
     <Row >
-    <Col > {first50Movies.map(PopularMovie => <MovieWithRating PopularMovie={PopularMovie} key={PopularMovie.url}/>)}</Col>
-    <Col>  {last50Movies.map(PopularMovie => <MovieWithRating PopularMovie={PopularMovie} key={PopularMovie.url}/>)}</Col>
-
+    <Col > {first50Movies.map(PopularMovie => <MovieWithRating 
+            PopularMovie={PopularMovie} key={PopularMovie.url}/>)}</Col>
+    <Col>  {last50Movies.map(PopularMovie => <MovieWithRating 
+            PopularMovie={PopularMovie} key={PopularMovie.url}/>)}</Col>
     </Row>
     </div>
     </>

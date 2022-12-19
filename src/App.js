@@ -37,6 +37,7 @@ function App() {
       <NavBar/>
       { /* ... and here is what happens when you click them */ }
       <Routes>
+      <Route path="/pagenotfound"     element={<PageNotFound/>} />
       <Route path="/"     element={<Main />} />
       <Route path="/register"   element={<RegisterUser/>} />
       <Route path="/user/login"   element={<LogIn/>} />
