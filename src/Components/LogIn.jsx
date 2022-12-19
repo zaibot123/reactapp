@@ -51,10 +51,10 @@ function LogIn() {
                          onChange={e => setUsername(e.target.value)}
                          
                        />
-      
-      </Form.Group>
+     
+      </Form.Group >
       <Form.Group className="mb-3" controlId="formGroupPassword">
-        <Form.Label>Password</Form.Label>
+        <Form.Label>Password </Form.Label>
         <Form.Control
                          type="Password"
                          placeholder="Password"
