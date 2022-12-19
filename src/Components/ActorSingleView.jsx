@@ -1,12 +1,9 @@
 import React from "react";
-import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
-import Route, { Navigate } from 'react-router-dom';
 import { useNavigate, useParams } from "react-router-dom";
 import Actor from "./Actor";
 import { useState } from "react";
 import { useEffect } from "react";
-import MovieList from "./MovieList";
 import { Card, Row, Col } from "react-bootstrap";
 import Spinner from 'react-bootstrap/Spinner';
 import Wordcloud from "./WordCloud";
