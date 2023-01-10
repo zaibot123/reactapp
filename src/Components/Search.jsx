@@ -32,7 +32,7 @@ function Search() {
 
   useEffect(() => {
     fetchPage();
-  }, []);
+  }, []); 
 
   if (status === "Done") {
 
