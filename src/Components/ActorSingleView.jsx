@@ -15,7 +15,7 @@ import Wordcloud from "./WordCloud";
 const ActorSingleView = () =>{
 
    
-
+ 
     const { id } = useParams()
     let [data, setData] = useState("");
     let[coactors, setCoactors] = useState(null);
@@ -71,7 +71,7 @@ return (
     <div className="list-title">  
       <h1>Coactors</h1>
     </div>
-    <Nav.Link >{coactors.map(x => <Card><Card.Body key={x.id}>{x.name}</Card.Body></Card>)}</Nav.Link>
+    {coactors.map(x => <Card><Nav.Link onClick={()=>navigate("/actor/"+x.profId)}><Card.Body key={x.id}>{x.name}</Card.Body></Nav.Link></Card>)}
   
 
 </>
