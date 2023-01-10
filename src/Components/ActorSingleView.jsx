@@ -63,6 +63,8 @@ return (
    <>
 <Row>
 
+  
+
 <Col><Actor all={data}/></Col>
 <Col><Wordcloud DataUrl={"http://localhost:5001/api/actors/words/"+data.name} style={{ position: 'absolute', left: '50%', top: '20%', }}/></Col>
 </Row>
@@ -71,7 +73,7 @@ return (
     <div className="list-title">  
       <h1>Coactors</h1>
     </div>
-    {coactors.map(x => <Card><Nav.Link onClick={()=>navigate("/actor/"+x.profId)}><Card.Body key={x.id}>{x.name}</Card.Body></Nav.Link></Card>)}
+    {coactors.map(x => <Card><Card.Body key={x.id}><Nav.Link onClick={()=>navigate('/actor/'+x.profId)}>{x.name}</Nav.Link></Card.Body></Card>)}
   
 
 </>
