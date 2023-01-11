@@ -50,7 +50,7 @@ const ActorSingleView = () =>{
           fetchData();
           fetchCoactorData();
 
-      },[]);
+      },[id]);
 
       
 
