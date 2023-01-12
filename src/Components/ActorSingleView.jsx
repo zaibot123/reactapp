@@ -19,7 +19,6 @@ const ActorSingleView = () =>{
     const { id } = useParams()
     let [data, setData] = useState("");
     let[coactors, setCoactors] = useState(null);
-    let[actorName, setActorName] = useState(null);
     let[status, setStatus]= useState("Loading");
     const navigate = useNavigate();
 
