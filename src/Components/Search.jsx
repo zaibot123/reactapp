@@ -32,7 +32,7 @@ function Search() {
 
   useEffect(() => {
     fetchPage();
-  }, []); 
+  }, [currentPage]); 
 
   if (status === "Done") {
 
@@ -43,13 +43,12 @@ function Search() {
         <Container style={{padding:90}}>
         <Row md={2}>
         <Col md={2}><Button onClick={function(){ 
-         setCurrentPage(alt['prev']); fetchPage();
+         setCurrentPage(alt['prev']); 
         }}>Prev</Button></Col>
         
         <Col md={1}><Button onClick={function(){ 
-         setCurrentPage(alt['next']); fetchPage(); 
-        }}>Next</Button></Col>
-        
+         setCurrentPage(alt['next']);
+        }}>Next</Button></Col>       
 </Row>
 </Container>
       </>
