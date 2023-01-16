@@ -13,6 +13,7 @@ import { useNavigate } from "react-router";
 
 
 
+
 const PutBookmark = async (MovieID, getUser) => {
   console.log(MovieID)
 
@@ -44,6 +45,8 @@ function MovieBigPoster() {
   let [Poster, setPoster] = useState(null)
   let [rating, setRating] = useState("");
   let [Plot, setPlot] = useState(null)
+  let [avgRating, setAvgRating] = useState(null)
+  
   const navigate = useNavigate();
 
   const { titleId } = useParams();
@@ -63,11 +66,12 @@ function MovieBigPoster() {
       setTitle(Data[0]['titleName'])
       setPoster(Data[0]['poster'])
       setPlot(Data[0]['titlePlot'])
+      setAvgRating(Data[0]['avgRating'])
 
     };
     fetchData();
-  }, []);
-  return (
+    }, []);
+     return (
     <><div className="list-title">
       <h1>{Title}</h1>
     </div>
@@ -81,7 +85,7 @@ function MovieBigPoster() {
               <Card>
                 <Card.Img style={{ width: '300px' }} variant="top" src={Poster} alt="alternatetext" />
 
-
+                  <p>Rating: {avgRating}</p>
                 {getUser === "Guest" ?
                   <><i>Want to rate or bookmark? Register as a new user or log in</i></>
                   : <>

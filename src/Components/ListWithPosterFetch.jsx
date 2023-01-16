@@ -33,7 +33,7 @@ return (
     <ListSubheader component="div">{title}</ListSubheader>
   </ImageListItem>
   {result.map((item) => (
-    <ImageListItem key={item.poster}>
+    <ImageListItem key={item.titleId}>
       <img
         src={`${item.poster}?w=248&fit=crop&auto=format`}
         srcSet={`${item.poster}?w=248&fit=crop&auto=format&dpr=2 2x`}
