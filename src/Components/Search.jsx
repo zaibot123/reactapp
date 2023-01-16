@@ -19,8 +19,6 @@ function Search() {
   let [alt, setAlt] = useState(null);
   
 
-
-
   const fetchPage = async () => {
     setStatus("Loading");
     console.log(currentPage);
