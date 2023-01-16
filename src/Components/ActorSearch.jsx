@@ -15,7 +15,6 @@ export default function ActorSearch(){
     const fetchPage = async () => {
         setStatus("Loading");
         const response = await fetch("http://localhost:5001/api/actors/search/"+search)
-     
         const newData = await response.json();
         setStatus("Done");
         setResult(newData);
