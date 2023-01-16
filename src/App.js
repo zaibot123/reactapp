@@ -35,6 +35,7 @@ function App() {
   return (
     <div className="root">
      <UsernameContext.Provider value={{getUser:user, setAUser:setUser}}>
+
       <NavBar/>
       { /* ... and here is what happens when you click them */ }
       <Routes>
@@ -50,7 +51,9 @@ function App() {
       <Route path="/movies/:titleId"   element={<MovieBigPoster/>} />
       <Route path="/actor/:id"   element={<ActorSingleView/>} />
       </Routes>
+      
       <Footer/>
+
       </UsernameContext.Provider>
     
     </div>
